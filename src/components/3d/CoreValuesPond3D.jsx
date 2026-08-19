@@ -3,7 +3,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { Html, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
-import { Zap, ShieldCheck, HeartHandshake, Award, Target, Users, Sparkles } from 'lucide-react';
+import { Zap, ShieldCheck, HeartHandshake, Award, Target, Users } from 'lucide-react';
 
 const VALUES_DATA = [
   {
@@ -11,9 +11,9 @@ const VALUES_DATA = [
     title: 'Innovation',
     icon: Zap,
     desc: 'Continuously developing smarter, scalable, and modern software solutions for evolving industry needs.',
-    position: [-2.3, 0.35, -1.8],
-    rotation: [0.15, 0.4, -0.05],
-    scale: 0.95,
+    position: [-1.45, 0.3, -1.85],
+    rotation: [0.1, 0.3, -0.05],
+    scale: 1.32,
     meshIdx: 0,
     texture: '/models/rocks/RockSet/RockTexture1.JPG'
   },
@@ -22,59 +22,59 @@ const VALUES_DATA = [
     title: 'Quality & Reliability',
     icon: ShieldCheck,
     desc: 'Delivering secure, robust, and dependable software architectures that run mission-critical operations 24/7.',
-    position: [2.3, 0.35, -1.8],
-    rotation: [-0.1, -0.5, 0.1],
-    scale: 0.95,
+    position: [1.45, 0.3, -1.85],
+    rotation: [-0.1, -0.3, 0.05],
+    scale: 1.32,
     meshIdx: 1,
     texture: '/models/rocks/RockSet/RockTexture2.JPG'
-  },
-  {
-    id: 'integrity',
-    title: 'Integrity',
-    icon: Award,
-    desc: 'Building enduring client trust across 3 decades through honesty, transparency, and relentless commitment.',
-    position: [-3.3, 0.25, 0.2],
-    rotation: [0.2, 0.8, -0.1],
-    scale: 1.0,
-    meshIdx: 2,
-    texture: '/models/rocks/RockSet/Rock5.jpg'
   },
   {
     id: 'customer',
     title: 'Customer Focus',
     icon: HeartHandshake,
     desc: 'Understanding unique operational workflows and engineering the exact right solutions tailored for each client.',
-    position: [3.3, 0.25, 0.2],
-    rotation: [0.1, -0.7, 0.05],
-    scale: 0.95,
+    position: [2.65, 0.25, 0.1],
+    rotation: [0.05, -0.6, 0.05],
+    scale: 1.35,
     meshIdx: 3,
     texture: '/models/rocks/RockSet/Rock6.jpg'
-  },
-  {
-    id: 'improvement',
-    title: 'Continuous Improvement',
-    icon: Target,
-    desc: 'Constantly upgrading our software suites with the latest cloud, mobile, and automation technologies.',
-    position: [-1.8, 0.15, 2.0],
-    rotation: [0.3, 0.2, 0.1],
-    scale: 0.95,
-    meshIdx: 4,
-    texture: '/models/rocks/RockSet/RockTexture1.JPG'
   },
   {
     id: 'support',
     title: 'Dedicated Support',
     icon: Users,
     desc: 'Providing responsive, experienced technical support, training, and annual maintenance for our partners.',
-    position: [1.8, 0.15, 2.0],
-    rotation: [-0.2, -0.3, 0.05],
-    scale: 0.98,
-    meshIdx: 1, // Use solid 3D rock geometry instead of plane
+    position: [1.4, 0.15, 1.95],
+    rotation: [-0.15, -0.25, 0.05],
+    scale: 1.38,
+    meshIdx: 1,
     texture: '/models/rocks/RockSet/RockTexture2.JPG'
+  },
+  {
+    id: 'improvement',
+    title: 'Continuous Improvement',
+    icon: Target,
+    desc: 'Constantly upgrading our software suites with the latest cloud, mobile, and automation technologies.',
+    position: [-1.4, 0.15, 1.95],
+    rotation: [0.2, 0.2, 0.05],
+    scale: 1.38,
+    meshIdx: 4,
+    texture: '/models/rocks/RockSet/RockTexture1.JPG'
+  },
+  {
+    id: 'integrity',
+    title: 'Integrity',
+    icon: Award,
+    desc: 'Building enduring client trust across 3 decades through honesty, transparency, and relentless commitment.',
+    position: [-2.65, 0.25, 0.1],
+    rotation: [0.15, 0.7, -0.05],
+    scale: 1.35,
+    meshIdx: 2,
+    texture: '/models/rocks/RockSet/Rock5.jpg'
   }
 ];
 
-// Individual 3D Interactive Rock
+// Individual 3D Interlocked Stepping Rock
 function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
   const meshRef = useRef();
   const isHovered = activeIdx === idx;
@@ -82,7 +82,6 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
 
   const rockGeometry = useMemo(() => {
     if (!objModel || !objModel.children || objModel.children.length === 0) return null;
-    // Pick rock meshes (exclude index 5 which was the plane)
     const validIdx = data.meshIdx % Math.min(5, objModel.children.length);
     const child = objModel.children[validIdx];
     if (child && child.geometry) {
@@ -101,17 +100,17 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
   useFrame((state, delta) => {
     if (!meshRef.current) return;
     
-    // Elevate up in Y and scale on hover
-    const targetY = data.position[1] + (isHovered ? 0.9 : 0);
-    const targetScale = data.scale * (isHovered ? 1.25 : 1.0);
+    // Elevate up in Y and scale smoothly on hover
+    const targetY = data.position[1] + (isHovered ? 0.85 : 0);
+    const targetScale = data.scale * (isHovered ? 1.18 : 1.0);
     
     meshRef.current.position.y = THREE.MathUtils.damp(meshRef.current.position.y, targetY, 7, delta);
     meshRef.current.scale.setScalar(THREE.MathUtils.damp(meshRef.current.scale.x, targetScale, 7, delta));
     
     if (!isHovered) {
-      meshRef.current.rotation.y = data.rotation[1] + Math.sin(state.clock.elapsedTime * 0.7 + idx) * 0.04;
+      meshRef.current.rotation.y = data.rotation[1] + Math.sin(state.clock.elapsedTime * 0.6 + idx) * 0.03;
     } else {
-      meshRef.current.rotation.y = THREE.MathUtils.damp(meshRef.current.rotation.y, data.rotation[1] + 0.25, 7, delta);
+      meshRef.current.rotation.y = THREE.MathUtils.damp(meshRef.current.rotation.y, data.rotation[1] + 0.2, 7, delta);
     }
   });
 
@@ -139,17 +138,17 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
       >
         <meshStandardMaterial
           map={texture}
-          roughness={0.65}
+          roughness={0.7}
           metalness={0.1}
           bumpScale={0.08}
-          color={isHovered ? '#ffffff' : '#dcd4c6'}
+          color={isHovered ? '#ffffff' : '#d8d0c2'}
           emissive={isHovered ? '#D4F82C' : '#000000'}
-          emissiveIntensity={isHovered ? 0.4 : 0}
+          emissiveIntensity={isHovered ? 0.45 : 0}
         />
 
         {/* Clean 3D Floating Value Badge */}
         <Html
-          position={[0, 1.2, 0]}
+          position={[0, 1.25, 0]}
           center
           distanceFactor={11}
           style={{ pointerEvents: 'none', userSelect: 'none' }}
@@ -160,21 +159,21 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
             }`}
             style={{ width: '220px' }}
           >
-            {/* Title Pill (Always visible, single 1-2 words) */}
+            {/* Title Pill (Always clean 1-2 words) */}
             <div
               className={`inline-flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-mono font-black transition-all shadow-xl ${
                 isHovered
                   ? 'bg-black text-[#D4F82C] border-2 border-[#D4F82C] shadow-[0_0_25px_rgba(212,248,44,0.9)] scale-105'
-                  : 'bg-black text-white border border-white/30 shadow-md hover:bg-neutral-900'
+                  : 'bg-black text-white border border-white/30 shadow-md'
               }`}
             >
               <IconComp className={`w-3.5 h-3.5 ${isHovered ? 'text-[#D4F82C]' : 'text-white'}`} />
               <span>{data.title}</span>
             </div>
 
-            {/* Detailed Description (ONLY visible when rock is hovered/elevated) */}
+            {/* Description (Smoothly reveals only when rock is hovered) */}
             {isHovered && (
-              <div className="mt-2.5 p-3.5 rounded-2xl bg-black text-white text-[11px] leading-relaxed font-semibold border-2 border-[#D4F82C]/70 shadow-[0_20px_40px_rgba(0,0,0,0.8)] backdrop-blur-xl animate-in fade-in zoom-in-95 duration-200">
+              <div className="mt-2.5 p-3.5 rounded-2xl bg-black text-white text-[11px] leading-relaxed font-semibold border-2 border-[#D4F82C]/70 shadow-[0_20px_40px_rgba(0,0,0,0.85)] backdrop-blur-xl animate-in fade-in zoom-in-95 duration-200">
                 {data.desc}
               </div>
             )}
@@ -192,18 +191,17 @@ function CrystalBluePondBasin() {
   useFrame((state) => {
     if (!geometryRef.current) return;
     const pos = geometryRef.current.attributes.position;
-    const time = state.clock.getElapsedTime() * 2.5;
+    const time = state.clock.getElapsedTime() * 2.4;
 
     for (let i = 0; i < pos.count; i++) {
       const u = pos.getX(i);
       const v = pos.getY(i);
       const dist = Math.sqrt(u * u + v * v);
       
-      // Multi-frequency wave ripples
       const z =
-        Math.sin(dist * 4.0 - time) * 0.09 +
-        Math.cos(u * 2.5 + time) * 0.04 +
-        Math.sin(v * 2.5 + time) * 0.04;
+        Math.sin(dist * 4.2 - time) * 0.08 +
+        Math.cos(u * 2.5 + time) * 0.035 +
+        Math.sin(v * 2.5 + time) * 0.035;
 
       pos.setZ(i, z);
     }
@@ -212,43 +210,118 @@ function CrystalBluePondBasin() {
   });
 
   return (
-    <group position={[0, -0.35, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+    <group position={[0, -0.3, 0]} rotation={[-Math.PI / 2, 0, 0]}>
       
-      {/* Circular Deep Pool Bed Basin */}
-      <mesh position={[0, 0, -0.1]}>
-        <circleGeometry args={[2.8, 64]} />
-        <meshStandardMaterial color="#023859" roughness={0.3} />
+      {/* Deep Pool Bed Basin */}
+      <mesh position={[0, 0, -0.15]}>
+        <circleGeometry args={[2.5, 64]} />
+        <meshStandardMaterial color="#02334f" roughness={0.3} />
       </mesh>
 
       {/* Crystal Clear Blue Water Surface */}
       <mesh receiveShadow>
-        <circleGeometry ref={geometryRef} args={[2.75, 64]} />
+        <circleGeometry ref={geometryRef} args={[2.45, 64]} />
         <meshPhysicalMaterial
           color="#0284c7"
           emissive="#0369a1"
-          emissiveIntensity={0.25}
-          roughness={0.06}
+          emissiveIntensity={0.3}
+          roughness={0.05}
           metalness={0.12}
-          transmission={0.75}
+          transmission={0.8}
           ior={1.333}
           thickness={1.6}
           reflectivity={0.95}
           clearcoat={1}
-          clearcoatRoughness={0.03}
+          clearcoatRoughness={0.02}
         />
       </mesh>
 
       {/* Radiant Caustic Rim */}
       <mesh position={[0, 0, 0.05]}>
-        <ringGeometry args={[2.5, 2.75, 64]} />
-        <meshBasicMaterial color="#38bdf8" transparent opacity={0.6} side={THREE.DoubleSide} />
+        <ringGeometry args={[2.2, 2.45, 64]} />
+        <meshBasicMaterial color="#38bdf8" transparent opacity={0.65} side={THREE.DoubleSide} />
       </mesh>
 
       {/* Center Glowing Penta Core Emblem */}
       <mesh position={[0, 0, 0.1]}>
-        <ringGeometry args={[0.3, 0.42, 32]} />
+        <ringGeometry args={[0.28, 0.4, 32]} />
         <meshBasicMaterial color="#D4F82C" transparent opacity={0.85} side={THREE.DoubleSide} />
       </mesh>
+    </group>
+  );
+}
+
+// Decorative 3D Nature Pebbles & Wildflowers around the Rock Pond
+function NaturePebblesAndFlowers() {
+  // Generate randomized pebble coordinates around the outer perimeter of rocks
+  const pebbles = useMemo(() => {
+    const items = [];
+    const colors = ['#8c8479', '#a69f94', '#6b665e', '#b8b2a7', '#4a4640'];
+    for (let i = 0; i < 55; i++) {
+      const angle = (i / 55) * Math.PI * 2 + (Math.random() * 0.1 - 0.05);
+      const radius = 3.2 + Math.random() * 0.9;
+      const x = Math.cos(angle) * radius;
+      const z = Math.sin(angle) * (radius * 0.85);
+      const size = 0.08 + Math.random() * 0.16;
+      items.push({
+        position: [x, -0.4 + size * 0.5, z],
+        scale: [size * (0.8 + Math.random() * 0.4), size * 0.6, size * (0.8 + Math.random() * 0.4)],
+        rotation: [Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI],
+        color: colors[i % colors.length]
+      });
+    }
+    return items;
+  }, []);
+
+  // Wildflower clusters (pink, white, and golden blooms)
+  const flowers = useMemo(() => {
+    const items = [];
+    const petalColors = ['#f472b6', '#fb7185', '#ffffff', '#fde047', '#e879f9'];
+    for (let i = 0; i < 28; i++) {
+      const angle = (i / 28) * Math.PI * 2 + Math.random() * 0.2;
+      const radius = 3.4 + Math.random() * 0.8;
+      const x = Math.cos(angle) * radius;
+      const z = Math.sin(angle) * (radius * 0.85);
+      items.push({
+        position: [x, -0.35, z],
+        color: petalColors[i % petalColors.length],
+        scale: 0.09 + Math.random() * 0.07,
+        rotation: [0, Math.random() * Math.PI * 2, 0]
+      });
+    }
+    return items;
+  }, []);
+
+  return (
+    <group>
+      {/* 3D Natural Pebbles */}
+      {pebbles.map((p, idx) => (
+        <mesh key={`peb-${idx}`} position={p.position} scale={p.scale} rotation={p.rotation} receiveShadow>
+          <dodecahedronGeometry args={[1, 1]} />
+          <meshStandardMaterial color={p.color} roughness={0.85} metalness={0.05} />
+        </mesh>
+      ))}
+
+      {/* 3D Wildflowers & Petals */}
+      {flowers.map((f, idx) => (
+        <group key={`flow-${idx}`} position={f.position} rotation={f.rotation}>
+          {/* Flower Stem / Green base */}
+          <mesh position={[0, -0.05, 0]}>
+            <cylinderGeometry args={[0.02, 0.02, 0.1, 6]} />
+            <meshStandardMaterial color="#4d7c0f" roughness={0.8} />
+          </mesh>
+          {/* Flower Blossom Petals */}
+          <mesh position={[0, 0.03, 0]} scale={[f.scale, f.scale * 0.6, f.scale]}>
+            <sphereGeometry args={[1, 8, 8]} />
+            <meshStandardMaterial color={f.color} roughness={0.5} emissive={f.color} emissiveIntensity={0.2} />
+          </mesh>
+          {/* Golden Center Pollen */}
+          <mesh position={[0, 0.08, 0]} scale={[f.scale * 0.4, f.scale * 0.4, f.scale * 0.4]}>
+            <sphereGeometry args={[1, 6, 6]} />
+            <meshStandardMaterial color="#eab308" emissive="#facc15" emissiveIntensity={0.4} />
+          </mesh>
+        </group>
+      ))}
     </group>
   );
 }
@@ -261,7 +334,7 @@ function PondScene({ activeIdx, setActiveIdx }) {
     <>
       <ambientLight intensity={1.6} />
       
-      {/* Sunlight & Atmospheric Lighting */}
+      {/* Sunlight & Lighting */}
       <directionalLight
         position={[6, 12, 6]}
         intensity={2.8}
@@ -276,7 +349,10 @@ function PondScene({ activeIdx, setActiveIdx }) {
       {/* Circular Crystal Blue Water Pond */}
       <CrystalBluePondBasin />
 
-      {/* 6 Circularly Interlocked 3D Stepping Stones */}
+      {/* Natural Pebbles and Wildflowers around the Pond */}
+      <NaturePebblesAndFlowers />
+
+      {/* 6 Contiguous Seamless Interlocked 3D Stepping Stones */}
       {VALUES_DATA.map((val, idx) => (
         <SingleRock3D
           key={val.id}
