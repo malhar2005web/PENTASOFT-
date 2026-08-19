@@ -1,40 +1,8 @@
 import React from 'react';
-import { Award, ShieldCheck, HeartHandshake, Zap, Target, Users, MapPin, Building, Calendar } from 'lucide-react';
+import { Target, Building, Calendar } from 'lucide-react';
+import CoreValuesPond from './CoreValuesPond';
 
 export default function AboutUsVision() {
-  const coreValues = [
-    {
-      icon: Zap,
-      title: 'Innovation',
-      desc: 'Continuously developing smarter, scalable, and modern software solutions for evolving industry needs.'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Quality & Reliability',
-      desc: 'Delivering secure, robust, and dependable software architectures that run mission-critical operations 24/7.'
-    },
-    {
-      icon: HeartHandshake,
-      title: 'Customer Focus',
-      desc: 'Understanding unique operational workflows and engineering the exact right solutions tailored for each client.'
-    },
-    {
-      icon: Award,
-      title: 'Integrity',
-      desc: 'Building enduring client trust across 3 decades through honesty, transparency, and relentless commitment.'
-    },
-    {
-      icon: Target,
-      title: 'Continuous Improvement',
-      desc: 'Constantly upgrading our software suites with the latest cloud, mobile, and automation technologies.'
-    },
-    {
-      icon: Users,
-      title: 'Dedicated Support',
-      desc: 'Providing responsive, experienced technical support, training, and annual maintenance for our partners.'
-    }
-  ];
-
   return (
     <section id="about-us" className="py-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +21,7 @@ export default function AboutUsVision() {
           </p>
         </div>
 
-        {/* Company History & Mission Grid (High Contrast Black Typography) */}
+        {/* Company History & Mission Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
           
           {/* History Card */}
@@ -85,7 +53,7 @@ export default function AboutUsVision() {
             </div>
           </div>
 
-          {/* Mission & Vision Card (High Contrast Black Typography) */}
+          {/* Mission & Vision Card */}
           <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
             <div>
               <div className="text-xs font-mono font-bold text-neutral-700 mb-4 flex items-center space-x-2">
@@ -127,10 +95,10 @@ export default function AboutUsVision() {
 
         </div>
 
-        {/* 6 Core Values Section */}
-        <div className="pt-8">
-          <div className="text-center pb-12">
-            <h3 className="text-3xl font-black text-black tracking-tight mb-3">
+        {/* 6 Core Values - Interactive Nature Pond Showcase */}
+        <div className="pt-10">
+          <div className="text-center pb-4">
+            <h3 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-3">
               Our Core Values
             </h3>
             <p className="text-neutral-800 text-sm max-w-xl mx-auto font-medium">
@@ -138,26 +106,8 @@ export default function AboutUsVision() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreValues.map((v, idx) => {
-              const IconComp = v.icon;
-              return (
-                <div key={idx} className="liquid-glass-card p-7 flex flex-col justify-between group">
-                  <div>
-                    <div className="w-10 h-10 rounded-xl bg-black text-[#D4F82C] flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform">
-                      <IconComp className="w-5 h-5" />
-                    </div>
-                    <h4 className="text-lg font-bold text-black mb-2">
-                      {v.title}
-                    </h4>
-                    <p className="text-neutral-800 text-xs leading-relaxed font-medium">
-                      {v.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          {/* Interactive Rock Pond Component */}
+          <CoreValuesPond />
         </div>
 
       </div>
