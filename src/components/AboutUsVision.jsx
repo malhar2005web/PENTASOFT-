@@ -1,6 +1,6 @@
 import React from 'react';
 import { Target, Building, Calendar } from 'lucide-react';
-import CoreValuesPond from './CoreValuesPond';
+import CoreValuesPond3D from './3d/CoreValuesPond3D';
 
 export default function AboutUsVision() {
   return (
@@ -95,7 +95,7 @@ export default function AboutUsVision() {
 
         </div>
 
-        {/* 6 Core Values - Interactive Nature Pond Showcase */}
+        {/* 6 Core Values - Real 3D Rock Pond WebGL Showcase */}
         <div className="pt-10">
           <div className="text-center pb-4">
             <h3 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-3">
@@ -106,8 +106,8 @@ export default function AboutUsVision() {
             </p>
           </div>
 
-          {/* Interactive Rock Pond Component */}
-          <CoreValuesPond />
+          {/* Real 3D Rock WebGL Pond Component */}
+          <CoreValuesPond3D />
         </div>
 
       </div>
