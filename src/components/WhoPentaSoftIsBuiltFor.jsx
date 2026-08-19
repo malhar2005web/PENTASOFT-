@@ -93,14 +93,23 @@ export default function WhoPentaSoftIsBuiltFor() {
             {personas[activeTab].title}
           </h3>
 
-          <p className="text-neutral-800 text-base leading-relaxed mb-8 font-medium">
+          <p className="text-neutral-800 text-base leading-relaxed mb-6 font-medium">
             {personas[activeTab].subtitle}
           </p>
 
-          <div className="space-y-3.5 border-t border-black/10 pt-8 mb-8">
+          {/* Neumorphic Feature Points */}
+          <div className="space-y-3 pt-2 mb-8">
             {personas[activeTab].points.map((point, pIdx) => (
-              <div key={pIdx} className="flex items-center space-x-3 text-sm text-neutral-900 font-semibold">
-                <CheckCircle2 className="w-5 h-5 text-black shrink-0" />
+              <div
+                key={pIdx}
+                className="px-4 py-3.5 rounded-2xl text-xs sm:text-sm font-mono text-neutral-900 font-bold transition-all duration-200 hover:scale-[1.01] flex items-center space-x-3"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.65)',
+                  boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.06), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
+                  border: '1px solid rgba(255, 255, 255, 0.7)'
+                }}
+              >
+                <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
                 <span>{point}</span>
               </div>
             ))}
