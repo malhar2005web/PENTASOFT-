@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Factory, Users, Database, FileSpreadsheet, Code2, ArrowRight } from 'lucide-react';
+import { Truck, Factory, Users, Database, FileSpreadsheet, Code2 } from 'lucide-react';
 
 export default function WhatPentaSoftDoes() {
   const stats = [
@@ -110,20 +110,25 @@ export default function WhatPentaSoftDoes() {
                     {p.description}
                   </p>
 
-                  {/* Feature Highlights */}
-                  <div className="space-y-2 pt-3 border-t border-black/10">
+                  {/* Soft Neumorphic Feature Pills */}
+                  <div className="space-y-2.5 pt-2">
                     {p.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-center space-x-2 text-xs font-mono text-neutral-900 font-semibold">
-                        <span className="w-1.5 h-1.5 rounded-full bg-black shrink-0"></span>
-                        <span className="truncate">{feat}</span>
+                      <div
+                        key={fIdx}
+                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-neutral-900 font-bold transition-all duration-200 hover:scale-[1.02]"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.62)',
+                          boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.06), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
+                          border: '1px solid rgba(255, 255, 255, 0.7)'
+                        }}
+                      >
+                        <div className="flex items-center space-x-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-black shrink-0"></span>
+                          <span className="truncate">{feat}</span>
+                        </div>
                       </div>
                     ))}
                   </div>
-                </div>
-
-                <div className="pt-6 mt-6 border-t border-black/10 flex items-center justify-between text-xs font-bold text-black">
-                  <span>EXPLORE MODULE</span>
-                  <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             );
