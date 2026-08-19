@@ -1,0 +1,193 @@
+=== SHEET: Website Information ===
+SECTION | INFORMATION REQUIRED | FILL UP / DETAILS
+Company Information | Official / Legal Company Name | PLANEX SOFTWARE
+Company Information | Short Company Description | We are a leading software company providing reliable Ready Mix Concrete (RMC), Batching, Crusher, Billing, Accounting, ERP, SCADA, E-Invoicing, and other customized business software solutions since 1994
+Company Information | Founded Year | 1994
+Company Information | Company History / Background | Our Company History: Established in 1994,Planex Software has grown into a trusted software solutions provider, specializing in Ready Mix Concrete (RMC) and business management software. Over the years, we have continuously enhanced our solutions to meet the changing needs of the construction and manufacturing industries. Our software portfolio includes RMC Batching Software, Weighbridge Management, Billing & Invoicing, Accounting, ERP, SCADA Integration, E-Invoicing, Tally Integration, and customized software solutions.With years of industry experience and a strong focus on innovation, reliability, and customer support, we have successfully served clients across India. Our commitment is to provide easy-to-use, reliable, and cost-effective software solutions that help businesses improve efficiency, accuracy, and productivity. Today, we continue to grow with our customers, developing smarter technology and delivering dependable solutions for modern business needs.
+Company Information | Mission
+Company Information | Vision | Our Mission:Our mission is to empower businesses with innovative, reliable, and user-friendly software solutions that enhance efficiency, accuracy, and productivity, while delivering continuous innovation and exceptional customer support.
+Company Information | Core Values | Our Core Values: Innovation – Continuously developing smarter and better software solutions.                                                                                                                      Quality & Reliability – Delivering secure, accurate, and dependable software.  Customer Focus – Understanding customer needs and providing the right solutions.                                                                                                                                                                                                                                                 Integrity – Building trust through honesty, transparency, and commitment.  Continuous Improvement – Constantly enhancing our products, services, and expertise.                                                                                                                                                                                                                                               Dedicated Support – Providing responsive and reliable support to our customers.                                                                                                                                                                                                          
+Company Information | Registered / Office Address | Planex Software                                                                                                                                                                         501-502/bld no-6,Sector-3,Shanti Garden, Near New Madha Buildings,Shristi, Mira Road€-401107
+Company Information | Official Email Address(es) | joshi@pentasoftconsultancy.com,rekha@pentasoftconsultancy.co,
+Company Information | Official Phone Number(s) | 9821027060/9664540011
+Company Information | Official Website / Domain
+Company Information | Social Media Links
+Company Information | GST / CIN / Registration Details (if applicable) | 27AABPJ2329N1ZM
+Company Information | Office Locations | Mumbai
+Services | Complete List of Services Offered | Our Software Development Services
+>Custom Software Development
+>Construction & RMC Software
+>ERP & Accounting Solutions
+>Web & Mobile Applications
+>Billing & E-Invoicing Solutions
+>API 
+>Database & Data Migration
+>Cloud & Server Solutions
+>Business Reports & MIS
+>Software Implementation & Training
+>AMC, Maintenance & Technical Support
+>Customized Solutions as per Client Requirements
+Services | Description of Each Service
+Services | Technologies Used for Each Service
+Services | Industries Served | Industries We Serve 
+* Ready Mix Concrete (RMC) Industry
+* Construction & Infrastructure Industry
+* Healthcare & Hospital Industry
+Manufacturing & Processing Industry
+Trading & Distribution Businesses
+Crusher & Mining Industry
+Other Multi-User & Multi-Branch Businesses
+Products | Complete List of PentaSoft-Owned Products |  Penta RMC Module,* Penta Crusher Module,* Penta Accounts Module,Penta ERP Module, Penta E-Invoice Module, Penta TeamPulse Module
+Products | Product Name(s) | Our Products Names:     
+* Penta RMC
+* Penta Crusher 
+* Penta Accounts 
+* Penta ERP
+* Penta E-Invoice 
+* Penta TeamPulse – Employee & Customer Management Module (Penta TeamPulse covers customer communication, call records, WhatsApp integration, employee tasks, daily follow-ups, productivity monitoring, and location tracking)
+Products | Product Description(s) | Our Product Description:  
+* Penta RMC – Ready Mix Concrete Module
+* Penta Crusher – Crusher Management Module
+* Penta Accounts – Accounting & Finance Module
+* Penta ERP – Enterprise Resource Planning Module
+* Penta E-Invoice – E-Invoicing & Compliance Module
+* Penta TeamPulse – Employee & Customer Management Module (Penta TeamPulse covers customer communication, call records, WhatsApp integration, employee tasks, daily follow-ups, productivity monitoring, and location tracking)
+Products | Product Features | Penta RMC – Ready Mix Concrete Software
+🏭 Plant & Batch Management
+⚖️ Weighing & Batching Control
+🚚 Dispatch & Delivery Management
+🧾 Sales & Billing
+📊 Production & Batch Reports
+👷 Customer & Site Management
+📍 Vehicle & Delivery Tracking
+💰 Payment & Outstanding Management
+📈 MIS & Management Reports
+🔗 Tally & E-Invoicing Integration
+☁️ Cloud & Multi-Plant Management
+Penta RMC is a complete Ready Mix Concrete management solution that streamlines batching, production, dispatch, sales, billing, delivery, accounting, and reporting from a single platform.                                                                                                                                                                                                                                                                                     Penta Crusher – Crusher Management Software
+🏭 Crusher Plant Management
+⚙️ Production & Crushing Management
+📦 Raw Material & Stock Management
+🚚 Dispatch & Delivery Management
+⚖️ Weighbridge Integration
+🧾 Sales & Billing Management
+💰 Purchase & Payment Management
+📊 Production & Stock Reports
+👷 Customer & Supplier Management
+📈 MIS & Management Reports
+🔗 Accounting & Tally Integration
+🧾 E-Invoicing Integration
+Penta Crusher is a complete crusher plant management solution designed to efficiently manage production, stock, weighbridge, sales, dispatch, billing, accounting, and business reporting.                                                                                                                                                                                                                -Penta Accounts – Accounting Software
+📒 Complete Accounting & Bookkeeping
+💰 Receivables & Payables Management
+🧾 Sales & Purchase Invoicing
+🏦 Bank & Cash Management
+📊 Ledger & Outstanding Reports🧮 GST & Tax Management
+🔄 Tally Integration
+🧾 E-Invoice & E-Way Bill Support
+📈 Profit & Loss & Balance Sheet
+📑 MIS & Financial Reports
+🔐 User Access & Security
+🏢 Multi-Company & Multi-Branch Support
+Penta Accounts is a powerful and user-friendly accounting solution that simplifies financial management, invoicing, GST compliance, receivables, payables, and business reporting.                                                                                                                                                                                                                                  Penta ERP – Enterprise Resource Planning Software
+📦 Inventory & Stock Management
+🛒 Purchase & Supplier Management
+🧾 Sales & Invoicing
+💰 Accounts & Finance
+👥 Customer & Vendor Management
+👨‍💼 Employee & Payroll Management
+🏭 Production Management
+🚚 Dispatch & Logistics Management
+📊 MIS & Management Reports
+🔗 Tally & E-Invoice Integration
+🏢 Multi-Branch & Multi-Company Management
+🔐 User Roles & Access Control
+Penta ERP is an integrated business management solution that connects finance, inventory, sales, purchase, production, HR, and operations on a single platform—helping businesses work smarter and grow efficiently.                                                                                                                                                   Penta E-Invoice – E-Invoicing Software
+🧾 Automated E-Invoice Generation
+🔗 GST Portal Integration
+🆔 IRN & QR Code Generation
+🚚 E-Way Bill Integration
+📤 Bulk Invoice Processing
+🔄 Invoice Cancellation & Management
+📊 E-Invoice Status & Reports
+📁 Invoice Data Export & Records
+🔐 Secure & Controlled Access
+⚡ Fast & Easy Invoice Processing
+Penta E-Invoice simplifies GST-compliant e-invoicing with automated IRN, QR Code, and E-Way Bill generation, helping businesses process invoices quickly, accurately, and efficiently.                                                                                                                                                                                                              Penta TeamPulse – Employee & Customer Management Software
+👥 Employee Task & Work Management
+📞 Customer Call & Communication Records
+💬 WhatsApp Integration
+📋 Daily Follow-Up & Activity Tracking
+📍 Employee Location Tracking
+⏱️ Daily Work & Attendance Monitoring
+🎯 Task Assignment & Status Tracking
+🔔 Follow-Up & Task Reminders
+🤝 Customer & Lead Management
+📊 Employee Performance & Productivity Reports
+📝 Daily Activity & Work Reports
+🔐 User Roles & Access Control
+Penta TeamPulse is an all-in-one employee and customer management solution that connects teams, tracks daily activities and tasks, manages customer communication and follow-ups, and provides real-time insights into employee productivity.
+Products | Product Target Industry / Customers | Primarily focused on the Construction Industry, our software is designed to address industry-specific needs while providing flexible, customizable solutions to meet each client’s unique requirements.
+Products | Product Screenshots / Assets Available?
+Products | Product Demo / Live URL(s)
+Products | Product Pricing (if publicly shareable)
+Projects / Apps | Complete List of Software / Apps Developed
+Projects / Apps | Web Applications Developed
+Projects / Apps | Mobile Applications Developed
+Projects / Apps | Desktop Applications Developed
+Projects / Apps | ERP / CRM / HRMS / EMS Projects
+Projects / Apps | Websites Developed
+Projects / Apps | AI / ML / Data Science Projects
+Projects / Apps | Other Enterprise / Custom Software Projects
+Projects / Apps | Project Name + Short Description for Each
+Projects / Apps | Technology Stack Used for Each Major Project
+Projects / Apps | Live URL / Demo URL for Each Public Project
+Projects / Apps | Project Screenshots / Videos Available?
+Clients | Complete List of Clients We Can Publicly Mention
+Clients | Client Name
+Clients | Client Industry
+Clients | Client Location
+Clients | Project / Service Delivered to Client
+Clients | Client Website
+Clients | Client Logo Available?
+Clients | Permission to Display Client Name / Logo on Website?
+Case Studies | Top 5–10 Projects for Case Studies
+Case Studies | Client / Industry for Each Case Study
+Case Studies | Business Problem / Challenge
+Case Studies | PentaSoft Solution
+Case Studies | Key Features / Modules
+Case Studies | Technology Used
+Case Studies | Business Results / Impact
+Case Studies | Screenshots / Supporting Assets
+Testimonials & Trust | Client Testimonials
+Testimonials & Trust | Google / Other Reviews
+Testimonials & Trust | Awards / Recognitions
+Testimonials & Trust | Certifications
+Testimonials & Trust | Technology / Business Partnerships
+Testimonials & Trust | Media Coverage / Publications
+Testimonials & Trust | Years of Experience (verified figure)
+Testimonials & Trust | Number of Clients / Projects (verified figure)
+Testimonials & Trust | Other Verified Company Statistics
+Brand Assets | Company Logo (SVG / PNG)
+Brand Assets | Brand Colors / Brand Guidelines
+Brand Assets | Office Photos
+Brand Assets | Team Photos
+Brand Assets | Founder / Leadership Photos & Details
+Brand Assets | Product Screenshots
+Brand Assets | Client Logos (with permission)
+Brand Assets | Company Brochure / Profile PDF
+Brand Assets | Existing Company Presentation
+Brand Assets | Existing Website Content / Copy
+Contact & Lead Generation | Preferred Contact Email for Website Enquiries
+Contact & Lead Generation | Preferred Contact Phone / WhatsApp Number
+Contact & Lead Generation | Google Maps / Office Location Link
+Contact & Lead Generation | Services / Products for Contact Form Dropdown
+Contact & Lead Generation | Preferred Call-to-Action (Demo / Contact / Quote / etc.)
+=== SHEET: Instructions ===
+Purpose | Please fill the 'Fill Up / Details' column with the requested information for the PentaSoft company website.
+Projects / Apps | For every major project, provide the project name, type, client (if publicly mentionable), industry, description, technologies, URL, and available screenshots.
+Clients | Only list client names/logos that PentaSoft is authorized to publicly display on its website.
+Products | Include software/products owned or offered by PentaSoft, including the Employee Management System if it is an official product.
+Case Studies | Prefer 5–10 strongest real projects with measurable business outcomes where available.
+Assets | Mention where logos, screenshots, brochures, certificates, photos, and other files are available.
+Accuracy | Please provide only verified information. Do not include confidential/NDA-protected information.

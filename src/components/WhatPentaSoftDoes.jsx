@@ -1,34 +1,55 @@
 import React from 'react';
-import { Globe, Smartphone, Building2, Pill, Cloud, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Truck, Factory, Users, Database, FileSpreadsheet, Code2, ArrowRight } from 'lucide-react';
 
 export default function WhatPentaSoftDoes() {
   const stats = [
-    { number: '15+', label: 'industry verticals powered across construction, pharma & enterprise' },
-    { number: '100%', label: 'custom cloud-native architectures tailored to your workflow' },
-    { number: '99.999%', label: 'verified cloud reliability & multi-region deployment uptime' }
+    { number: '1994', label: 'founded with 30+ years of software innovation & reliability' },
+    { number: '6+', label: 'specialized Penta product modules for industrial operations' },
+    { number: '100%', label: 'client-centric customization, training & dedicated AMC support' }
   ];
 
-  const cards = [
+  const products = [
     {
-      tag: '□ WEB & CLOUD PLATFORMS',
-      title: 'Cloud-Based Web Systems & Portals',
-      description: 'Modern, high-performance web platforms, enterprise SaaS portals, and secure API architectures. Complete cloud management on AWS and Azure engineered for scalability, speed, and 24/7 reliability.',
-      features: ['Enterprise Web Applications', 'Full Cloud DevOps & Infrastructure', 'High-Security Client Portals', 'Automated Cloud Workflows'],
-      icon: Globe
+      tag: '□ CONCRETE & BATCHING',
+      title: 'Penta RMC — Ready Mix Concrete',
+      description: 'Complete RMC software streamlining batching control, weighbridge integration, dispatch & delivery tracking, sales, billing, multi-plant cloud management, and automated Tally & E-Invoicing.',
+      features: ['Plant & Batch Weighing Control', 'Vehicle & Delivery GPS Tracking', 'Automated Sales & GST Invoicing', 'Tally & SCADA Hardware Sync'],
+      icon: Truck
     },
     {
-      tag: '□ MOBILE & CROSS-PLATFORM',
-      title: 'Enterprise Mobile & Field Applications',
-      description: 'High-speed iOS, Android, and Desktop applications built with cross-platform frameworks. Features offline-first database synchronization, biometric security, and direct hardware integration for on-field teams.',
-      features: ['iOS & Android Native Performance', 'Offline-First SQLite Data Sync', 'Field Workforce Telemetry', 'Secure Biometric Authentication'],
-      icon: Smartphone
+      tag: '□ CRUSHER & MINING',
+      title: 'Penta Crusher — Plant Management',
+      description: 'End-to-end crusher plant management software designed for crushing production tracking, raw material stock, weighbridge integration, sales dispatch, and comprehensive MIS business reporting.',
+      features: ['Crusher Production & Stock Tracking', 'Weighbridge Hardware Integration', 'Purchase, Sales & Billing Management', 'Automated E-Invoicing & E-Way Bill'],
+      icon: Factory
     },
     {
-      tag: '□ INDUSTRY DOMAIN SOLUTIONS',
-      title: 'Pharma, Construction & Industry Systems',
-      description: 'Deep domain-specific IT solutions: FDA/GMP-compliant batch tracking and laboratory data systems for Pharmaceuticals, alongside on-site project tracking, BIM integrations, and ERP management for Construction.',
-      features: ['Pharma GMP & Batch Tracking', 'Construction Job-Site & Material ERP', 'Real-Time IoT & Asset Telemetry', 'Custom Regulatory Compliance'],
-      icon: Building2
+      tag: '□ WORKFORCE & CUSTOMERS',
+      title: 'Penta TeamPulse — Management Suite',
+      description: 'All-in-one employee and customer management software covering call logs, WhatsApp integration, task assignment, daily follow-ups, GPS location tracking, and real-time productivity monitoring.',
+      features: ['WhatsApp & Customer Call Records', 'Daily Task & Follow-up Tracking', 'Live Employee Location & Attendance', 'Productivity & MIS Reports'],
+      icon: Users
+    },
+    {
+      tag: '□ ENTERPRISE ERP',
+      title: 'Penta ERP — Business Planning',
+      description: 'Integrated business management software connecting finance, inventory, sales, purchase, production, HR, and multi-branch operations on a unified platform for smart, efficient growth.',
+      features: ['Inventory & Stock Control', 'Multi-Branch & Multi-Company', 'Payroll & Employee HR Management', 'Centralized Operations Reporting'],
+      icon: Database
+    },
+    {
+      tag: '□ GST & COMPLIANCE',
+      title: 'Penta Accounts & E-Invoice',
+      description: 'Powerful accounting & automated e-invoicing solution with direct GST portal integration, IRN/QR code generation, E-Way bills, ledger accounts, and balance sheet financial reports.',
+      features: ['Automated IRN & QR Code Generation', 'Direct GST Portal & Bulk Invoicing', 'Complete Receivables & Payables', 'Tally Accounting Integration'],
+      icon: FileSpreadsheet
+    },
+    {
+      tag: '□ BESPOKE DEVELOPMENT',
+      title: 'Custom Software & Cloud Solutions',
+      description: 'Tailored web platforms, native mobile applications, API integrations, data migration, and cloud infrastructure engineered to meet your exact operational requirements.',
+      features: ['Custom Web & Mobile Apps', 'Cloud Server Architecture & APIs', 'Database Migration & Security', 'Comprehensive AMC & Technical Support'],
+      icon: Code2
     }
   ];
 
@@ -43,7 +64,7 @@ export default function WhatPentaSoftDoes() {
               <div className="text-5xl sm:text-6xl font-black tracking-tight text-black font-mono">
                 {s.number}
               </div>
-              <div className="text-xs sm:text-sm text-neutral-800 max-w-[220px] mx-auto font-bold leading-snug">
+              <div className="text-xs sm:text-sm text-neutral-800 max-w-[240px] mx-auto font-bold leading-snug">
                 {s.label}
               </div>
             </div>
@@ -53,55 +74,55 @@ export default function WhatPentaSoftDoes() {
         {/* Section Heading */}
         <div className="text-center pt-24 pb-16 max-w-3xl mx-auto">
           <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
-            <span>□ FULL-SPECTRUM SOFTWARE & CLOUD SOLUTIONS</span>
+            <span>□ PENTASOFT PRODUCT SUITE & SERVICES</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
-            What PentaSoft* Delivers
+            Software Solutions Built for Scale
           </h2>
           <p className="text-neutral-800 text-base sm:text-lg font-medium leading-relaxed">
-            From modern responsive web platforms and cross-platform mobile apps to complete cloud-based enterprise operations, we engineer custom software solutions tailored to complex industrial demands.
+            From specialized Ready Mix Concrete (RMC) and Crusher plant software to enterprise ERP, TeamPulse workforce tracking, and bespoke cloud development.
           </p>
         </div>
 
-        {/* 3 Liquid Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card, idx) => {
-            const IconComp = card.icon;
+        {/* 6 Liquid Glass Product Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((p, idx) => {
+            const IconComp = p.icon;
             return (
               <div
                 key={idx}
-                className="liquid-glass-card p-8 sm:p-10 flex flex-col justify-between group"
+                className="liquid-glass-card p-8 sm:p-9 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="text-[11px] font-mono font-bold text-neutral-700 mb-6">
-                    {card.tag}
+                  <div className="text-[11px] font-mono font-bold text-neutral-700 mb-5">
+                    {p.tag}
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-black/90 flex items-center justify-center text-[#D4F82C] mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl bg-black text-[#D4F82C] flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                     <IconComp className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">
-                    {card.title}
+                  <h3 className="text-xl font-bold text-black mb-3.5">
+                    {p.title}
                   </h3>
 
-                  <p className="text-neutral-800 text-sm leading-relaxed font-medium mb-6">
-                    {card.description}
+                  <p className="text-neutral-800 text-xs leading-relaxed font-medium mb-6">
+                    {p.description}
                   </p>
 
-                  {/* Bullet Highlights */}
-                  <div className="space-y-2 pt-2 border-t border-black/10">
-                    {card.features.map((feat, fIdx) => (
+                  {/* Feature Highlights */}
+                  <div className="space-y-2 pt-3 border-t border-black/10">
+                    {p.features.map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-center space-x-2 text-xs font-mono text-neutral-900 font-semibold">
                         <span className="w-1.5 h-1.5 rounded-full bg-black shrink-0"></span>
-                        <span>{feat}</span>
+                        <span className="truncate">{feat}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-8 mt-8 border-t border-black/10 flex items-center justify-between text-xs font-bold text-black">
-                  <span>EXPLORE INDUSTRY CAPABILITIES</span>
+                <div className="pt-6 mt-6 border-t border-black/10 flex items-center justify-between text-xs font-bold text-black">
+                  <span>EXPLORE MODULE</span>
                   <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

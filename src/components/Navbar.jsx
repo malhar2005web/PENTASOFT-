@@ -34,20 +34,19 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'py-3 bg-[#D4F82C]/90 backdrop-blur-xl border-b border-black/10'
           : 'py-5 bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Zoomed Official Logo without white padding */}
           <a href="#home" className="flex items-center space-x-3.5 group">
-            <img 
-              src="/logo.png" 
-              alt="PentaSoft PCS Logo" 
+            <img
+              src="/logo.png"
+              alt="PentaSoft PCS Logo"
               className="h-11 sm:h-12 w-auto object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-200"
             />
             <div className="flex flex-col">
@@ -64,11 +63,10 @@ export default function Navbar() {
               <a
                 key={link.id}
                 href={link.href}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
-                  activeSection === link.id
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${activeSection === link.id
                     ? 'text-[#D4F82C] bg-black shadow-md'
                     : 'text-neutral-900 hover:text-black hover:bg-white/40'
-                }`}
+                  }`}
               >
                 {link.name}
               </a>
@@ -81,7 +79,7 @@ export default function Navbar() {
               <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
               <span>99.999% SLA Verified</span>
             </div>
-            
+
             <a
               href="#contact"
               className="inline-flex items-center space-x-1.5 px-5 py-2.5 rounded-full text-xs font-bold bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"

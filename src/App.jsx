@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import WhatPentaSoftDoes from './components/WhatPentaSoftDoes';
 import WhoPentaSoftIsBuiltFor from './components/WhoPentaSoftIsBuiltFor';
+import AboutUsVision from './components/AboutUsVision';
 import TechnicalConsultation from './components/TechnicalConsultation';
 import Footer from './components/Footer';
 import GlassBubbleCursor from './components/ui/GlassBubbleCursor';
@@ -16,6 +17,7 @@ export default function App() {
         <HeroSection />
         <WhatPentaSoftDoes />
         <WhoPentaSoftIsBuiltFor />
+        <AboutUsVision />
         <TechnicalConsultation />
       </main>
       <Footer />

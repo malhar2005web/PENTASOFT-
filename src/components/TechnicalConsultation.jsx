@@ -20,7 +20,7 @@ export default function TechnicalConsultation() {
   return (
     <section id="contact" className="py-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
+
         <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
           <span>□ INITIATE INDUSTRY ENGAGEMENT</span>
         </div>
