@@ -11,11 +11,11 @@ const VALUES_DATA = [
     title: 'Innovation',
     icon: Zap,
     desc: 'Continuously developing smarter, scalable, and modern software solutions for evolving industry needs.',
-    position: [-1.55, 0.15, -2.1],
+    position: [-2.15, 0.2, -2.15],
     rotation: [0.1, 0.3, -0.05],
-    scale: 0.88,
+    scale: 0.92,
     meshIdx: 0,
-    badgePos: [0, 0.35, 0.8], // Place badge in front so it never shoots up towards navbar
+    badgePos: [-0.2, 1.1, 0.2],
     texture: '/models/rocks/RockSet/RockTexture1.JPG'
   },
   {
@@ -23,11 +23,11 @@ const VALUES_DATA = [
     title: 'Quality & Reliability',
     icon: ShieldCheck,
     desc: 'Delivering secure, robust, and dependable software architectures that run mission-critical operations 24/7.',
-    position: [1.55, 0.15, -2.1],
+    position: [2.15, 0.2, -2.15],
     rotation: [-0.1, -0.3, 0.05],
-    scale: 0.88,
+    scale: 0.92,
     meshIdx: 1,
-    badgePos: [0, 0.35, 0.8], // Place badge in front so it never shoots up towards navbar
+    badgePos: [0.2, 1.1, 0.2],
     texture: '/models/rocks/RockSet/RockTexture2.JPG'
   },
   {
@@ -35,11 +35,11 @@ const VALUES_DATA = [
     title: 'Customer Focus',
     icon: HeartHandshake,
     desc: 'Understanding unique operational workflows and engineering the exact right solutions tailored for each client.',
-    position: [2.7, 0.1, 0.0],
+    position: [3.25, 0.15, 0.05],
     rotation: [0.05, -0.6, 0.05],
-    scale: 0.9,
+    scale: 0.95,
     meshIdx: 3,
-    badgePos: [0, 1.1, 0],
+    badgePos: [0.2, 1.1, 0],
     texture: '/models/rocks/RockSet/Rock6.jpg'
   },
   {
@@ -47,11 +47,11 @@ const VALUES_DATA = [
     title: 'Dedicated Support',
     icon: Users,
     desc: 'Providing responsive, experienced technical support, training, and annual maintenance for our partners.',
-    position: [1.5, 0.0, 1.95],
+    position: [1.95, 0.05, 2.1],
     rotation: [-0.15, -0.25, 0.05],
-    scale: 0.9,
+    scale: 0.94,
     meshIdx: 1,
-    badgePos: [0, 1.1, 0],
+    badgePos: [0.2, 1.1, 0],
     texture: '/models/rocks/RockSet/RockTexture2.JPG'
   },
   {
@@ -59,11 +59,11 @@ const VALUES_DATA = [
     title: 'Continuous Improvement',
     icon: Target,
     desc: 'Constantly upgrading our software suites with the latest cloud, mobile, and automation technologies.',
-    position: [-1.5, 0.0, 1.95],
+    position: [-1.95, 0.05, 2.1],
     rotation: [0.2, 0.2, 0.05],
-    scale: 0.9,
+    scale: 0.94,
     meshIdx: 4,
-    badgePos: [0, 1.1, 0],
+    badgePos: [-0.2, 1.1, 0],
     texture: '/models/rocks/RockSet/RockTexture1.JPG'
   },
   {
@@ -71,11 +71,11 @@ const VALUES_DATA = [
     title: 'Integrity',
     icon: Award,
     desc: 'Building enduring client trust across 3 decades through honesty, transparency, and relentless commitment.',
-    position: [-2.7, 0.1, 0.0],
+    position: [-3.25, 0.15, 0.05],
     rotation: [0.15, 0.7, -0.05],
-    scale: 0.9,
+    scale: 0.95,
     meshIdx: 2,
-    badgePos: [0, 1.1, 0],
+    badgePos: [-0.2, 1.1, 0],
     texture: '/models/rocks/RockSet/Rock5.jpg'
   }
 ];
@@ -106,7 +106,7 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
   useFrame((state, delta) => {
     if (!meshRef.current) return;
     
-    const targetY = data.position[1] + (isHovered ? 0.65 : 0);
+    const targetY = data.position[1] + (isHovered ? 0.7 : 0);
     const targetScale = data.scale * (isHovered ? 1.18 : 1.0);
     
     meshRef.current.position.y = THREE.MathUtils.damp(meshRef.current.position.y, targetY, 7, delta);
@@ -151,7 +151,7 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
           emissiveIntensity={isHovered ? 0.45 : 0}
         />
 
-        {/* Clean 3D Floating Value Badge */}
+        {/* Clean 3D Floating Value Badge (Strictly Non-Overlapping) */}
         <Html
           position={data.badgePos || [0, 1.1, 0]}
           center
@@ -163,21 +163,21 @@ function SingleRock3D({ data, objModel, activeIdx, setActiveIdx, idx }) {
             className={`transition-all duration-300 transform flex flex-col items-center text-center ${
               isHovered ? 'scale-105' : 'scale-95'
             }`}
-            style={{ width: '210px' }}
+            style={{ width: '200px' }}
           >
-            {/* Title Pill (Always clean 1-2 words) */}
+            {/* Title Pill (Compact with zero badge overlap) */}
             <div
-              className={`inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-black transition-all shadow-xl ${
+              className={`inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-mono font-black whitespace-nowrap transition-all shadow-xl ${
                 isHovered
                   ? 'bg-black text-[#D4F82C] border-2 border-[#D4F82C] shadow-[0_0_20px_rgba(212,248,44,0.9)] scale-105'
                   : 'bg-black text-white border border-white/30 shadow-md'
               }`}
             >
-              <IconComp className={`w-3.5 h-3.5 ${isHovered ? 'text-[#D4F82C]' : 'text-white'}`} />
+              <IconComp className={`w-3.5 h-3.5 ${isHovered ? 'text-[#D4F82C]' : 'text-white'} shrink-0`} />
               <span>{data.title}</span>
             </div>
 
-            {/* Description (Smoothly reveals only when rock is hovered) */}
+            {/* Description (Revealed smoothly on hover) */}
             {isHovered && (
               <div className="mt-2 p-3 rounded-2xl bg-black text-white text-[10.5px] leading-relaxed font-semibold border-2 border-[#D4F82C]/70 shadow-[0_16px_36px_rgba(0,0,0,0.85)] backdrop-blur-xl animate-in fade-in zoom-in-95 duration-200">
                 {data.desc}
@@ -205,7 +205,7 @@ function CrystalBluePondBasin() {
       const dist = Math.sqrt(u * u + v * v);
       
       const z =
-        Math.sin(dist * 3.8 - time) * 0.065 +
+        Math.sin(dist * 3.8 - time) * 0.07 +
         Math.cos(u * 2.2 + time) * 0.025 +
         Math.sin(v * 2.2 + time) * 0.025;
 
@@ -220,13 +220,13 @@ function CrystalBluePondBasin() {
       
       {/* Deep Pool Bed Basin */}
       <mesh position={[0, 0, -0.18]}>
-        <circleGeometry args={[2.9, 64]} />
+        <circleGeometry args={[3.1, 64]} />
         <meshStandardMaterial color="#022a44" roughness={0.4} />
       </mesh>
 
       {/* Crystal Clear Blue Water Surface */}
       <mesh receiveShadow>
-        <circleGeometry ref={geometryRef} args={[2.85, 64]} />
+        <circleGeometry ref={geometryRef} args={[3.05, 64]} />
         <meshPhysicalMaterial
           color="#0284c7"
           emissive="#0369a1"
@@ -244,34 +244,34 @@ function CrystalBluePondBasin() {
 
       {/* Radiant Caustic Water Edge Rim */}
       <mesh position={[0, 0, 0.04]}>
-        <ringGeometry args={[2.65, 2.85, 64]} />
+        <ringGeometry args={[2.85, 3.05, 64]} />
         <meshBasicMaterial color="#38bdf8" transparent opacity={0.6} side={THREE.DoubleSide} />
       </mesh>
 
       {/* Center Glowing Water Core Emblem */}
       <mesh position={[0, 0, 0.08]}>
-        <ringGeometry args={[0.3, 0.44, 32]} />
+        <ringGeometry args={[0.32, 0.46, 32]} />
         <meshBasicMaterial color="#D4F82C" transparent opacity={0.85} side={THREE.DoubleSide} />
       </mesh>
 
       {/* Floating Water Lily Pads on the Pond Surface */}
-      <group position={[-1.0, 0.7, 0.06]} rotation={[0, 0, 0.4]}>
+      <group position={[-1.1, 0.75, 0.06]} rotation={[0, 0, 0.4]}>
         <mesh>
-          <circleGeometry args={[0.3, 24, 0, Math.PI * 1.85]} />
+          <circleGeometry args={[0.32, 24, 0, Math.PI * 1.85]} />
           <meshStandardMaterial color="#2d6a1d" roughness={0.6} side={THREE.DoubleSide} />
         </mesh>
       </group>
 
-      <group position={[1.1, -0.5, 0.06]} rotation={[0, 0, -0.8]}>
+      <group position={[1.2, -0.55, 0.06]} rotation={[0, 0, -0.8]}>
         <mesh>
-          <circleGeometry args={[0.26, 24, 0, Math.PI * 1.85]} />
+          <circleGeometry args={[0.28, 24, 0, Math.PI * 1.85]} />
           <meshStandardMaterial color="#245a16" roughness={0.6} side={THREE.DoubleSide} />
         </mesh>
       </group>
 
-      <group position={[0.4, 1.1, 0.06]} rotation={[0, 0, 1.2]}>
+      <group position={[0.45, 1.2, 0.06]} rotation={[0, 0, 1.2]}>
         <mesh>
-          <circleGeometry args={[0.22, 24, 0, Math.PI * 1.85]} />
+          <circleGeometry args={[0.24, 24, 0, Math.PI * 1.85]} />
           <meshStandardMaterial color="#367d23" roughness={0.6} side={THREE.DoubleSide} />
         </mesh>
       </group>
@@ -288,9 +288,9 @@ function DensePebbleEmbankmentAndPlants() {
       '#857d72', '#b3aba0', '#635e56', '#524d45', '#9e968b'
     ];
 
-    for (let i = 0; i < 90; i++) {
-      const angle = (i / 90) * Math.PI * 2 + (Math.random() * 0.05 - 0.025);
-      const radius = 2.55 + Math.random() * 0.4;
+    for (let i = 0; i < 95; i++) {
+      const angle = (i / 95) * Math.PI * 2 + (Math.random() * 0.05 - 0.025);
+      const radius = 2.75 + Math.random() * 0.45;
       const x = Math.cos(angle) * radius;
       const z = Math.sin(angle) * (radius * 0.88);
       const size = 0.14 + Math.random() * 0.18;
@@ -302,9 +302,9 @@ function DensePebbleEmbankmentAndPlants() {
       });
     }
 
-    for (let i = 0; i < 110; i++) {
-      const angle = (i / 110) * Math.PI * 2 + (Math.random() * 0.06 - 0.03);
-      const radius = 2.9 + Math.random() * 0.65;
+    for (let i = 0; i < 115; i++) {
+      const angle = (i / 115) * Math.PI * 2 + (Math.random() * 0.06 - 0.03);
+      const radius = 3.15 + Math.random() * 0.7;
       const x = Math.cos(angle) * radius;
       const z = Math.sin(angle) * (radius * 0.88);
       const size = 0.11 + Math.random() * 0.22;
@@ -324,7 +324,7 @@ function DensePebbleEmbankmentAndPlants() {
     const grassColors = ['#4d7c0f', '#65a30d', '#3f6212', '#84cc16'];
     for (let i = 0; i < 55; i++) {
       const angle = (i / 55) * Math.PI * 2 + Math.random() * 0.2;
-      const radius = 3.3 + Math.random() * 0.7;
+      const radius = 3.55 + Math.random() * 0.75;
       const x = Math.cos(angle) * radius;
       const z = Math.sin(angle) * (radius * 0.88);
       const height = 0.4 + Math.random() * 0.45;
@@ -343,7 +343,7 @@ function DensePebbleEmbankmentAndPlants() {
     const petalColors = ['#ec4899', '#db2777', '#f43f5e', '#e11d48', '#fb7185'];
     for (let i = 0; i < 32; i++) {
       const angle = (i / 32) * Math.PI * 2 + Math.random() * 0.2;
-      const radius = 3.35 + Math.random() * 0.75;
+      const radius = 3.6 + Math.random() * 0.8;
       const x = Math.cos(angle) * radius;
       const z = Math.sin(angle) * (radius * 0.88);
       const stemHeight = 0.3 + Math.random() * 0.3;
@@ -399,7 +399,7 @@ function PondScene({ activeIdx, setActiveIdx }) {
   const obj = useLoader(OBJLoader, '/models/rocks/RockSet/RockSet.obj');
 
   return (
-    <group position={[0, -0.3, 0]} scale={0.85}>
+    <group position={[0, -0.2, 0]} scale={0.96}>
       <ambientLight intensity={1.6} />
       
       <directionalLight
@@ -419,7 +419,7 @@ function PondScene({ activeIdx, setActiveIdx }) {
       {/* DENSE Interlocking River Pebbles & Garden Plants */}
       <DensePebbleEmbankmentAndPlants />
 
-      {/* 6 Proportional 3D Stepping Stones */}
+      {/* 6 Well-Spaced 3D Stepping Stones (Zero Badge Overlap) */}
       {VALUES_DATA.map((val, idx) => (
         <SingleRock3D
           key={val.id}
@@ -438,13 +438,13 @@ export default function CoreValuesPond3D() {
   const [activeIdx, setActiveIdx] = useState(null);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto my-4 select-none">
+    <div className="relative w-full max-w-6xl mx-auto my-2 select-none">
       
-      {/* Pure WebGL 3D Canvas Stage with generous headroom */}
-      <div className="relative w-full aspect-[16/10] max-h-[620px] min-h-[460px]">
+      {/* Pure WebGL 3D Canvas Stage */}
+      <div className="relative w-full aspect-[16/10] max-h-[660px] min-h-[480px]">
         <Canvas
           shadows
-          camera={{ position: [0, 8.4, 6.6], fov: 40 }}
+          camera={{ position: [0, 8.2, 6.4], fov: 41 }}
           gl={{ antialias: true, alpha: true }}
           onPointerMissed={() => setActiveIdx(null)}
         >
