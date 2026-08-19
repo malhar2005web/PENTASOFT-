@@ -53,7 +53,7 @@ export default function AboutUsVision() {
           </p>
         </div>
 
-        {/* Company History & Mission Grid */}
+        {/* Company History & Mission Grid (High Contrast Black Typography) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
           
           {/* History Card */}
@@ -85,35 +85,42 @@ export default function AboutUsVision() {
             </div>
           </div>
 
-          {/* Mission & Vision Card */}
-          <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between bg-black text-white border-black/20">
+          {/* Mission & Vision Card (High Contrast Black Typography) */}
+          <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
             <div>
-              <div className="text-xs font-mono font-bold text-[#D4F82C] mb-4 flex items-center space-x-2">
-                <Target className="w-4 h-4 text-[#D4F82C]" />
+              <div className="text-xs font-mono font-bold text-neutral-700 mb-4 flex items-center space-x-2">
+                <Target className="w-4 h-4 text-black" />
                 <span>OUR MISSION & VISION</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white mb-6">
+              <h3 className="text-2xl sm:text-3xl font-black text-black mb-6">
                 Empowering Businesses Through Smarter Technology
               </h3>
-              <div className="space-y-5 text-slate-300 text-sm leading-relaxed font-medium">
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="text-xs font-mono text-[#D4F82C] font-bold uppercase mb-1">Our Mission</div>
-                  <p className="text-white text-sm">
+              
+              <div className="space-y-5">
+                <div className="p-5 rounded-2xl bg-black/5 border border-black/10">
+                  <div className="text-xs font-mono text-black font-bold uppercase mb-2 flex items-center space-x-1.5">
+                    <span className="w-2 h-2 rounded-full bg-black"></span>
+                    <span>OUR MISSION</span>
+                  </div>
+                  <p className="text-neutral-900 text-sm leading-relaxed font-medium">
                     To empower businesses with innovative, reliable, and user-friendly software solutions that enhance efficiency, accuracy, and productivity, while delivering continuous innovation and exceptional customer support.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="text-xs font-mono text-[#D4F82C] font-bold uppercase mb-1">Our Vision</div>
-                  <p className="text-white text-sm">
+                <div className="p-5 rounded-2xl bg-black/5 border border-black/10">
+                  <div className="text-xs font-mono text-black font-bold uppercase mb-2 flex items-center space-x-1.5">
+                    <span className="w-2 h-2 rounded-full bg-black"></span>
+                    <span>OUR VISION</span>
+                  </div>
+                  <p className="text-neutral-900 text-sm leading-relaxed font-medium">
                     To be the most trusted technology partner for industrial and commercial enterprises, building scalable software ecosystems that streamline operations and drive long-term business growth.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
-              <span className="text-[#D4F82C] font-bold">PAN-INDIA CLIENT BASE</span>
+            <div className="pt-8 mt-8 border-t border-black/10 flex items-center justify-between text-xs font-mono font-bold text-neutral-800">
+              <span className="text-black font-bold">PAN-INDIA CLIENT BASE</span>
               <span>MIRA ROAD, MUMBAI HQ</span>
             </div>
           </div>
