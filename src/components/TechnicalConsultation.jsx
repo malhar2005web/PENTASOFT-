@@ -139,36 +139,36 @@ export default function TechnicalConsultation() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-mono text-neutral-800 font-bold mb-2">FULL NAME / ORGANIZATION</label>
+                  <label className="block text-xs font-mono text-blue-200 font-bold mb-2">FULL NAME / ORGANIZATION</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Rajesh Sharma (Operations Director)"
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/50 text-sm font-medium focus:outline-none focus:border-[#38bdf8] focus:bg-white/15 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-neutral-800 font-bold mb-2">WORK EMAIL ADDRESS</label>
+                  <label className="block text-xs font-mono text-blue-200 font-bold mb-2">WORK EMAIL ADDRESS</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="rajesh@organization.com"
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/50 text-sm font-medium focus:outline-none focus:border-[#38bdf8] focus:bg-white/15 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-neutral-800 font-bold mb-2">PRIMARY INDUSTRY / SOLUTION FOCUS</label>
+                <label className="block text-xs font-mono text-blue-200 font-bold mb-2">PRIMARY INDUSTRY / SOLUTION FOCUS</label>
                 <select
                   value={formData.industryDomain}
                   onChange={(e) => setFormData({ ...formData, industryDomain: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl bg-[#0F172A] border border-white/20 text-white text-sm font-medium focus:outline-none focus:border-[#38bdf8] transition-colors"
                 >
                   <option value="Pharmaceuticals & Healthcare IT Solutions">Pharmaceuticals & Healthcare IT (GMP / Batch Tracking)</option>
                   <option value="Construction & Infrastructure Operations">Construction & Infrastructure (Field Apps / Material ERP)</option>
@@ -179,14 +179,14 @@ export default function TechnicalConsultation() {
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-neutral-800 font-bold mb-2">PROJECT SCOPE & INDUSTRY WORKFLOW REQUIREMENTS</label>
+                <label className="block text-xs font-mono text-blue-200 font-bold mb-2">PROJECT SCOPE & INDUSTRY WORKFLOW REQUIREMENTS</label>
                 <textarea
                   rows={4}
                   required
                   value={formData.workloadRequirements}
                   onChange={(e) => setFormData({ ...formData, workloadRequirements: e.target.value })}
                   placeholder="Describe your current industry challenges, app/website needs, cloud hosting preferences, or specific operational requirements..."
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/50 text-sm font-medium focus:outline-none focus:border-[#38bdf8] focus:bg-white/15 transition-colors"
                 ></textarea>
               </div>
 

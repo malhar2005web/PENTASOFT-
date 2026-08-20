@@ -141,7 +141,7 @@ export default function HeroSection() {
 
           <a
             href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-xs bg-[#FF4820] text-white hover:bg-[#E53E17] shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-xs bg-[#1E40AF] text-white hover:bg-[#1D4ED8] shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-blue-400/30"
           >
             <span className="font-mono">⌘</span>
             <span>REQUEST A CONSULTATION</span>
