@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('what-we-do');
+  const [hoveredNav, setHoveredNav] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +35,8 @@ export default function Navbar() {
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
+  const currentSelection = hoveredNav || activeSection;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
@@ -59,21 +63,49 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Clean 4-Item Navigation with About Us next to Contact */}
-          <nav className="hidden md:flex items-center space-x-1 px-3 py-1.5 rounded-full bg-blue-950/50 border border-white/15 backdrop-blur-md">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
-                  activeSection === link.id
-                    ? 'text-white bg-[#DC2626] shadow-md'
-                    : 'text-blue-100 hover:text-white hover:bg-white/15'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+          {/* Interactive Sliding Liquid Glass Bubble Nav */}
+          <nav 
+            className="hidden md:flex items-center space-x-1 px-3 py-1.5 rounded-full bg-blue-950/60 border border-white/15 backdrop-blur-md relative"
+            onMouseLeave={() => setHoveredNav(null)}
+          >
+            {navLinks.map((link) => {
+              const isSelected = currentSelection === link.id;
+              return (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onMouseEnter={() => setHoveredNav(link.id)}
+                  onClick={() => {
+                    setActiveSection(link.id);
+                    setHoveredNav(null);
+                  }}
+                  className={`relative px-4 py-1.5 rounded-full text-xs font-bold transition-colors duration-200 z-10 ${
+                    isSelected
+                      ? 'text-white drop-shadow-sm'
+                      : 'text-blue-100 hover:text-white'
+                  }`}
+                >
+                  {/* Sliding Frosted Red Liquid Bubble Indicator */}
+                  {isSelected && (
+                    <motion.div
+                      layoutId="navbar-liquid-bubble"
+                      className="absolute inset-0 rounded-full z-[-1]"
+                      style={{
+                        background: 'radial-gradient(circle at center, rgba(239, 68, 68, 0.95) 0%, rgba(220, 38, 38, 0.95) 65%, rgba(185, 28, 28, 1) 100%)',
+                        boxShadow: '0 8px 24px -4px rgba(220, 38, 38, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.45), inset 0 -2px 4px rgba(0, 0, 0, 0.25), 0 0 16px rgba(239, 68, 68, 0.4)',
+                        border: '1px solid rgba(255, 255, 255, 0.4)'
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 420,
+                        damping: 30
+                      }}
+                    />
+                  )}
+                  <span>{link.name}</span>
+                </a>
+              );
+            })}
           </nav>
 
           {/* Right Status & Red Action Button */}
