@@ -41,8 +41,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
         scrolled
-          ? 'py-2.5 frosted-glass-navbar shadow-md'
-          : 'py-3.5 frosted-glass-navbar'
+          ? 'py-2.5 frosted-glass-navbar-blue shadow-lg'
+          : 'py-3.5 frosted-glass-navbar-blue'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,16 +56,16 @@ export default function Navbar() {
               className="h-11 sm:h-12 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-200"
             />
             <div className="flex flex-col">
-              <span className="font-black text-lg tracking-tight text-[#0F172A] flex items-center gap-1.5">
-                Planex <span className="font-semibold text-[#1D4ED8]">Software</span>
+              <span className="font-black text-lg tracking-tight text-white flex items-center gap-1.5">
+                Planex <span className="font-semibold text-blue-200">Software</span>
               </span>
-              <span className="text-[10px] font-mono text-neutral-500 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE</span>
+              <span className="text-[10px] font-mono text-blue-300 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE</span>
             </div>
           </a>
 
           {/* Interactive Sliding Liquid Glass Bubble Nav Container */}
           <nav 
-            className="hidden md:flex items-center space-x-1 px-3 py-1.5 rounded-full bg-slate-100/90 border border-slate-300/80 backdrop-blur-xl relative shadow-inner"
+            className="hidden md:flex items-center space-x-1 px-3 py-1.5 rounded-full bg-blue-950/60 border border-white/20 backdrop-blur-xl relative shadow-inner"
             onMouseLeave={() => setHoveredNav(null)}
           >
             {navLinks.map((link) => {
@@ -82,7 +82,7 @@ export default function Navbar() {
                   className={`relative px-4 py-1.5 rounded-full text-xs font-bold transition-colors duration-200 z-10 ${
                     isSelected
                       ? 'text-white drop-shadow-sm'
-                      : 'text-neutral-700 hover:text-black'
+                      : 'text-blue-100 hover:text-white'
                   }`}
                 >
                   {/* 3D Claymorphic Red Liquid Bubble Indicator */}
@@ -92,7 +92,7 @@ export default function Navbar() {
                       className="absolute inset-0 rounded-full z-[-1]"
                       style={{
                         background: 'linear-gradient(180deg, #FF4B4B 0%, #DC2626 55%, #B91C1C 100%)',
-                        boxShadow: '0 4px 0 #991B1B, 0 8px 18px -2px rgba(220, 38, 38, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.65), inset 0 -2px 3px rgba(0, 0, 0, 0.35)',
+                        boxShadow: '0 4px 0 #7F1D1D, 0 8px 16px -2px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -2px 3px rgba(0, 0, 0, 0.4)',
                         border: '1px solid rgba(255, 255, 255, 0.4)'
                       }}
                       transition={{
@@ -110,8 +110,8 @@ export default function Navbar() {
 
           {/* Right Status & 3D Claymorphic Red Action Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-[11px] font-mono font-bold text-neutral-700 px-3.5 py-1.5 rounded-full bg-slate-100/90 border border-slate-300/80 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="flex items-center space-x-2 text-[11px] font-mono font-bold text-blue-100 px-3.5 py-1.5 rounded-full bg-blue-950/60 border border-white/20 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span>Since 1994 • 30+ Yrs</span>
             </div>
             
@@ -139,13 +139,13 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-2xl border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 mt-2 shadow-2xl rounded-b-2xl mx-4 text-slate-800">
+        <div className="md:hidden bg-[#1E3A8A]/95 backdrop-blur-2xl border-b border-blue-900 px-4 pt-3 pb-6 space-y-2 mt-2 shadow-2xl rounded-b-2xl mx-4 text-white">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:text-black hover:bg-slate-100"
+              className="block px-3 py-2 rounded-md text-sm font-semibold text-blue-100 hover:text-white hover:bg-blue-800"
             >
               {link.name}
             </a>
