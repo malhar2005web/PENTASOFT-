@@ -110,20 +110,20 @@ export default function WhatPentaSoftDoes() {
                     {p.description}
                   </p>
 
-                  {/* Soft Neumorphic Feature Pills */}
+                  {/* Blue Neumorphic Feature Pills */}
                   <div className="space-y-2.5 pt-2">
                     {p.features.map((feat, fIdx) => (
                       <div
                         key={fIdx}
-                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-neutral-900 font-bold transition-all duration-200 hover:scale-[1.02]"
+                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-blue-950 font-bold transition-all duration-200 hover:scale-[1.02] hover:bg-blue-100"
                         style={{
-                          background: 'rgba(255, 255, 255, 0.62)',
-                          boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.06), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
-                          border: '1px solid rgba(255, 255, 255, 0.7)'
+                          background: '#EFF6FF',
+                          boxShadow: '4px 4px 10px rgba(30, 64, 175, 0.08), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
+                          border: '1px solid #BFDBFE'
                         }}
                       >
                         <div className="flex items-center space-x-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-black shrink-0"></span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF] shrink-0"></span>
                           <span className="truncate">{feat}</span>
                         </div>
                       </div>
