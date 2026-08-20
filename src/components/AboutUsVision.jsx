@@ -1,6 +1,8 @@
 import React from 'react';
-import { Target, Building, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import CoreValuesPond3D from './3d/CoreValuesPond3D';
+import StoneTabletCanvas from './3d/StoneTabletCanvas';
+import ModernTabletCanvas from './3d/ModernTabletCanvas';
 
 export default function AboutUsVision() {
   return (
@@ -17,81 +19,18 @@ export default function AboutUsVision() {
             Our Story, Vision & Heritage
           </h2>
           <p className="text-neutral-800 text-base sm:text-lg max-w-3xl mx-auto font-medium leading-relaxed">
-            Established in 1994, Planex Software / PentaSoft has grown into a trusted software solutions provider, empowering industrial leaders, construction firms, and growing enterprises across India.
+            From our rock-solid foundational heritage in 1994 to cutting-edge cloud architectures — discover our 3-decade journey and our vision for empowering modern industry.
           </p>
         </div>
 
-        {/* Company History & Mission Grid */}
+        {/* 3D Dual Tablet Showcase: Ancient 1994 Stone Tablet vs Modern Future Tablet */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
           
-          {/* History Card */}
-          <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
-            <div>
-              <div className="text-xs font-mono font-bold text-neutral-700 mb-4 flex items-center space-x-2">
-                <Building className="w-4 h-4 text-black" />
-                <span>COMPANY HISTORY & HERITAGE</span>
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-black mb-6">
-                Over 3 Decades of Reliable Engineering
-              </h3>
-              <div className="space-y-4 text-neutral-900 text-sm leading-relaxed font-medium">
-                <p>
-                  Established in <strong>1994</strong>, Planex Software / PentaSoft has evolved into a premier enterprise software provider specializing in <strong>Ready Mix Concrete (RMC), Crusher Plant Management, ERP, SCADA integration, Billing, E-Invoicing, and Custom Cloud Solutions</strong>.
-                </p>
-                <p>
-                  Over the past 30+ years, we have continuously innovated our proprietary <strong>Penta Product Suite</strong> to meet the demanding requirements of construction, manufacturing, healthcare, and trading sectors across India.
-                </p>
-                <p>
-                  Our unwavering commitment is to provide easy-to-use, robust, and cost-effective software solutions that simplify daily operations, eliminate manual errors, and maximize operational productivity.
-                </p>
-              </div>
-            </div>
+          {/* Left: 3D Ancient Stone Tablet (1994 Heritage & History) */}
+          <StoneTabletCanvas />
 
-            <div className="pt-8 mt-8 border-t border-black/10 flex items-center justify-between text-xs font-mono font-bold text-black">
-              <span>FOUNDED: 1994 (MUMBAI, INDIA)</span>
-              <span>GST: 27AABPJ2329N1ZM</span>
-            </div>
-          </div>
-
-          {/* Mission & Vision Card */}
-          <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
-            <div>
-              <div className="text-xs font-mono font-bold text-neutral-700 mb-4 flex items-center space-x-2">
-                <Target className="w-4 h-4 text-black" />
-                <span>OUR MISSION & VISION</span>
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-black mb-6">
-                Empowering Businesses Through Smarter Technology
-              </h3>
-              
-              <div className="space-y-5">
-                <div className="p-5 rounded-2xl bg-black/5 border border-black/10">
-                  <div className="text-xs font-mono text-black font-bold uppercase mb-2 flex items-center space-x-1.5">
-                    <span className="w-2 h-2 rounded-full bg-black"></span>
-                    <span>OUR MISSION</span>
-                  </div>
-                  <p className="text-neutral-900 text-sm leading-relaxed font-medium">
-                    To empower businesses with innovative, reliable, and user-friendly software solutions that enhance efficiency, accuracy, and productivity, while delivering continuous innovation and exceptional customer support.
-                  </p>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-black/5 border border-black/10">
-                  <div className="text-xs font-mono text-black font-bold uppercase mb-2 flex items-center space-x-1.5">
-                    <span className="w-2 h-2 rounded-full bg-black"></span>
-                    <span>OUR VISION</span>
-                  </div>
-                  <p className="text-neutral-900 text-sm leading-relaxed font-medium">
-                    To be the most trusted technology partner for industrial and commercial enterprises, building scalable software ecosystems that streamline operations and drive long-term business growth.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-8 mt-8 border-t border-black/10 flex items-center justify-between text-xs font-mono font-bold text-neutral-800">
-              <span className="text-black font-bold">PAN-INDIA CLIENT BASE</span>
-              <span>MIRA ROAD, MUMBAI HQ</span>
-            </div>
-          </div>
+          {/* Right: 3D Modern Digital iPad / Tablet (Our Mission & Vision) */}
+          <ModernTabletCanvas />
 
         </div>
 
