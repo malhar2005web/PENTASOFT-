@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, Phone, Mail } from 'lucide-react';
+import { Send, CheckCircle2, Phone, Mail, Loader2, AlertCircle } from 'lucide-react';
 
 export default function TechnicalConsultation() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,10 +12,55 @@ export default function TechnicalConsultation() {
     workloadRequirements: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name && formData.email) {
+    if (!formData.name || !formData.email) return;
+
+    setIsSubmitting(true);
+    setErrorMsg('');
+
+    try {
+      // Direct email dispatch to joshi@pentasoftconsultancy.com via FormSubmit AJAX API
+      const response = await fetch('https://formsubmit.co/ajax/joshi@pentasoftconsultancy.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          'Client Name': formData.name,
+          'Work Email': formData.email,
+          'Industry / Solution Focus': formData.industryDomain,
+          'Project Scope & Requirements': formData.workloadRequirements,
+          '_subject': `New Consultation Request from ${formData.name} [Planex Software]`,
+          '_template': 'table',
+          '_captcha': 'false'
+        })
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        // Fallback to mailto if external endpoint is blocked
+        const mailtoUrl = `mailto:joshi@pentasoftconsultancy.com?subject=${encodeURIComponent(
+          `New Consultation Request from ${formData.name}`
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\nIndustry: ${formData.industryDomain}\n\nRequirements:\n${formData.workloadRequirements}`
+        )}`;
+        window.location.href = mailtoUrl;
+        setSubmitted(true);
+      }
+    } catch (err) {
+      console.warn('Form submit error, fallback to mailto:', err);
+      const mailtoUrl = `mailto:joshi@pentasoftconsultancy.com?subject=${encodeURIComponent(
+        `New Consultation Request from ${formData.name}`
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nIndustry: ${formData.industryDomain}\n\nRequirements:\n${formData.workloadRequirements}`
+      )}`;
+      window.location.href = mailtoUrl;
       setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -67,16 +114,26 @@ export default function TechnicalConsultation() {
               <div className="w-16 h-16 rounded-full bg-black text-[#D4F82C] mx-auto flex items-center justify-center shadow-lg">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-black text-black">Consultation Request Dispatched</h3>
-              <p className="text-neutral-800 text-sm max-w-md mx-auto font-medium">
-                Thank you. Our enterprise solutions team will review your industry requirements and reach out via email or phone within 24 hours.
+              <h3 className="text-2xl font-black text-black">Inquiry Transmitted Successfully</h3>
+              <p className="text-neutral-800 text-sm max-w-md mx-auto font-medium leading-relaxed">
+                Your specifications have been delivered to <strong>joshi@pentasoftconsultancy.com</strong>. Our solutions team will review your project requirements and respond within 24 hours.
               </p>
-              <button
-                onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', industryDomain: 'Pharmaceuticals & Healthcare IT Solutions', workloadRequirements: '' }); }}
-                className="px-6 py-2.5 rounded-full text-xs font-mono font-bold bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-md"
-              >
-                Submit another inquiry
-              </button>
+              <div className="pt-4">
+                <button
+                  onClick={() => {
+                    setSubmitted(false);
+                    setFormData({
+                      name: '',
+                      email: '',
+                      industryDomain: 'Pharmaceuticals & Healthcare IT Solutions',
+                      workloadRequirements: ''
+                    });
+                  }}
+                  className="px-6 py-2.5 rounded-full text-xs font-mono font-bold bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-md transition-transform hover:scale-105"
+                >
+                  Transmit another inquiry
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -133,12 +190,29 @@ export default function TechnicalConsultation() {
                 ></textarea>
               </div>
 
+              {errorMsg && (
+                <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-700 text-xs font-mono flex items-center space-x-2">
+                  <AlertCircle className="w-4 h-4 shrink-0" />
+                  <span>{errorMsg}</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full py-4 rounded-full font-bold text-xs font-mono bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full py-4 rounded-full font-bold text-xs font-mono bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <span>TRANSMIT SPECIFICATIONS FOR REVIEW</span>
-                <Send className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin text-[#D4F82C]" />
+                    <span>TRANSMITTING SPECIFICATIONS...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>TRANSMIT SPECIFICATIONS FOR REVIEW</span>
+                    <Send className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           )}

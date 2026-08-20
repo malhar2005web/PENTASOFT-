@@ -1,14 +1,55 @@
 import React, { useState } from 'react';
-import { ArrowRight, Mail, Send, CheckCircle2, MessageSquare, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Mail, Send, CheckCircle2, MessageSquare, ShieldCheck, Loader2 } from 'lucide-react';
 
 export default function FinalCTA() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name && formData.email) {
+    if (!formData.name || !formData.email) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/joshi@pentasoftconsultancy.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          'Client Name': formData.name,
+          'Work Email': formData.email,
+          'Project Specs': formData.message,
+          '_subject': `New Technical Inquiry from ${formData.name} [Planex Software]`,
+          '_template': 'table',
+          '_captcha': 'false'
+        })
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+      } else {
+        const mailtoUrl = `mailto:joshi@pentasoftconsultancy.com?subject=${encodeURIComponent(
+          `New Technical Inquiry from ${formData.name}`
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nProject Specs:\n${formData.message}`
+        )}`;
+        window.location.href = mailtoUrl;
+        setFormSubmitted(true);
+      }
+    } catch (err) {
+      console.warn('Form submit error, fallback to mailto:', err);
+      const mailtoUrl = `mailto:joshi@pentasoftconsultancy.com?subject=${encodeURIComponent(
+        `New Technical Inquiry from ${formData.name}`
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nProject Specs:\n${formData.message}`
+      )}`;
+      window.location.href = mailtoUrl;
       setFormSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -33,7 +74,7 @@ export default function FinalCTA() {
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Whether you need to architect a new software suite, migrate legacy systems, or implement production-grade AI pipelines, our engineering team is ready.
+              Whether you need to architect a new software suite, migrate legacy systems, or implement production-grade cloud architectures, our engineering team is ready.
             </p>
 
             <div className="space-y-3 pt-4">
@@ -61,7 +102,7 @@ export default function FinalCTA() {
                 </div>
                 <h3 className="text-2xl font-bold text-white">Inquiry Received</h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto">
-                  Thank you for reaching out to Planex Software Consultancy. Our engineering team will review your project specs and respond within 24 hours.
+                  Thank you for reaching out to Planex Software Consultancy. Your inquiry has been sent to <strong>joshi@pentasoftconsultancy.com</strong>. Our engineering team will review your project specs and respond within 24 hours.
                 </p>
                 <button
                   onClick={() => { setFormSubmitted(false); setFormData({ name: '', email: '', message: '' }); }}
@@ -81,7 +122,7 @@ export default function FinalCTA() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. Sarah Jenkins — Enterprise Tech Lead"
+                    placeholder="e.g. Rajesh Sharma (Operations Director)"
                     className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/15 text-white text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all"
                   />
                 </div>
@@ -93,7 +134,7 @@ export default function FinalCTA() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="sarah@organization.com"
+                    placeholder="rajesh@organization.com"
                     className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/15 text-white text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all"
                   />
                 </div>
@@ -112,10 +153,20 @@ export default function FinalCTA() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-[#00E5FF] via-blue-500 to-blue-600 text-black hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] transition-all duration-300 flex items-center justify-center space-x-2"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-[#00E5FF] via-blue-500 to-blue-600 text-black hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-70"
                 >
-                  <span>Submit Technical Inquiry</span>
-                  <Send className="w-4 h-4" />
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-black" />
+                      <span>Transmitting Inquiry...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Technical Inquiry</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}
