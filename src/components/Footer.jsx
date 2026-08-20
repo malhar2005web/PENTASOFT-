@@ -18,9 +18,9 @@ export default function Footer() {
               />
               <div className="flex flex-col">
                 <span className="font-extrabold text-white text-base tracking-tight">
-                  PentaSoft <span className="text-slate-400 font-normal">Consultancy</span>
+                  Planex <span className="text-slate-400 font-normal">Software Consultancy</span>
                 </span>
-                <span className="text-[10px] text-slate-500 font-mono font-bold">PLANEX SOFTWARE • ESTD. 1994</span>
+                <span className="text-[10px] text-slate-500 font-mono font-bold">PLANEX SOFTWARE CONSULTANCY • ESTD. 1994</span>
               </div>
             </div>
             <p className="text-slate-400 text-xs font-sans max-w-sm leading-relaxed">
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom SLA and Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} Planex Software / PentaSoft Consultancy Services (PCS). All rights reserved.
+            © {new Date().getFullYear()} Planex Software Consultancy Services. All rights reserved.
           </div>
           <div className="flex items-center space-x-2 text-emerald-400">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>

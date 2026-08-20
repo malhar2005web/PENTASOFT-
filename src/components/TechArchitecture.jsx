@@ -52,7 +52,7 @@ export default function TechArchitecture() {
             Connected enterprise <span className="text-gradient-cyan">infrastructure topology</span>.
           </h2>
           <p className="mt-4 text-slate-300 text-base leading-relaxed">
-            Click nodes below to inspect how PentaSoft engineers connected data pipelines, microservices, and AI vector intelligence.
+            Click nodes below to inspect how Planex Software Consultancy engineers connected data pipelines, microservices, and AI vector intelligence.
           </p>
         </div>
 

@@ -48,14 +48,14 @@ export default function Navbar() {
           <a href="#home" className="flex items-center space-x-3.5 group">
             <img 
               src="/logo.png" 
-              alt="PentaSoft PCS Logo" 
+              alt="Planex Software Consultancy Logo" 
               className="h-11 sm:h-12 w-auto object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-200"
             />
             <div className="flex flex-col">
               <span className="font-black text-lg tracking-tight text-black flex items-center gap-1.5">
-                PentaSoft <span className="font-semibold text-neutral-800">Consultancy</span>
+                Planex <span className="font-semibold text-neutral-800">Software Consultancy</span>
               </span>
-              <span className="text-[10px] font-mono text-neutral-700 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE</span>
+              <span className="text-[10px] font-mono text-neutral-700 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE CONSULTANCY</span>
             </div>
           </a>
 
