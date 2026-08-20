@@ -55,11 +55,11 @@ export default function HeroSection() {
         </p>
 
         {/* Action Buttons with High Z-Index Dropdown */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-6 relative z-50">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 relative z-50">
           
           {/* Main Dropdown Button for Demo */}
           <div className="relative w-full sm:w-auto">
-            <div className="inline-flex rounded-full shadow-2xl bg-[#DC2626] p-0.5 border border-red-700">
+            <div className="inline-flex rounded-full clay-btn-red p-1">
               <button
                 type="button"
                 onClick={() => {
@@ -69,7 +69,7 @@ export default function HeroSection() {
                     setDropdownOpen(!dropdownOpen);
                   }
                 }}
-                className="px-7 py-3.5 rounded-full font-bold text-xs bg-[#DC2626] text-white hover:bg-[#B91C1C] transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                className="px-7 py-3 rounded-full font-bold text-xs text-white transition-all flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>{showLaptop ? `LIVE: ${demoOptions[selectedDemoIndex].name}` : 'SEE LIVE DEMO'}</span>
               </button>
@@ -80,7 +80,7 @@ export default function HeroSection() {
                   e.stopPropagation();
                   setDropdownOpen((prev) => !prev);
                 }}
-                className="px-3.5 py-3.5 rounded-full bg-[#B91C1C] text-white hover:bg-red-800 transition-all flex items-center justify-center cursor-pointer"
+                className="px-3.5 py-3 rounded-full text-white hover:bg-white/20 transition-all flex items-center justify-center cursor-pointer border-l border-white/30"
                 title="Select Web App Demo"
               >
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
@@ -107,18 +107,18 @@ export default function HeroSection() {
                       onClick={() => handleSelectDemo(idx)}
                       className={`w-full text-left p-3 rounded-xl transition-all flex items-start space-x-3 cursor-pointer my-1 ${
                         isSelected 
-                          ? 'bg-[#D4F82C] text-black font-bold shadow-md' 
+                          ? 'clay-btn-red text-white font-bold' 
                           : 'text-white hover:bg-white/15'
                       }`}
                     >
                       <IconComp className="w-4 h-4 mt-0.5 shrink-0" />
                       <div className="flex-1 min-w-0">
                         <div className="text-xs font-bold truncate">{opt.name}</div>
-                        <div className={`text-[10px] truncate mt-0.5 ${isSelected ? 'text-neutral-900 font-semibold' : 'text-neutral-400'}`}>
+                        <div className={`text-[10px] truncate mt-0.5 ${isSelected ? 'text-white font-medium' : 'text-neutral-400'}`}>
                           {opt.desc}
                         </div>
                       </div>
-                      {isSelected && <Check className="w-4 h-4 shrink-0 mt-0.5 text-black" />}
+                      {isSelected && <Check className="w-4 h-4 shrink-0 mt-0.5 text-white" />}
                     </button>
                   );
                 })}
@@ -141,7 +141,7 @@ export default function HeroSection() {
 
           <a
             href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-xs bg-[#1E40AF] text-white hover:bg-[#1D4ED8] shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-blue-400/30"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-xs clay-btn-blue flex items-center justify-center space-x-2 cursor-pointer"
           >
             <span className="font-mono">⌘</span>
             <span>REQUEST A CONSULTATION</span>

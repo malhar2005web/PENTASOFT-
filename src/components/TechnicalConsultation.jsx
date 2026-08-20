@@ -129,7 +129,7 @@ export default function TechnicalConsultation() {
                       workloadRequirements: ''
                     });
                   }}
-                  className="px-6 py-2.5 rounded-full text-xs font-mono font-bold bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-md transition-transform hover:scale-105"
+                  className="px-7 py-3 rounded-full text-xs font-mono font-bold clay-btn-red cursor-pointer"
                 >
                   Transmit another inquiry
                 </button>
@@ -200,7 +200,7 @@ export default function TechnicalConsultation() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-full font-bold text-xs font-mono bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full py-4 rounded-full font-bold text-xs font-mono clay-btn-red flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

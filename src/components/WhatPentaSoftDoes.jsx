@@ -98,7 +98,7 @@ export default function WhatPentaSoftDoes() {
                     {p.tag}
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-[#DC2626] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl clay-btn-red flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                     <IconComp className="w-6 h-6" />
                   </div>
 

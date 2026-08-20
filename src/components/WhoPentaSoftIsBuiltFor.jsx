@@ -61,7 +61,7 @@ export default function WhoPentaSoftIsBuiltFor() {
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-12">
           {personas.map((p, idx) => (
             <button
               key={idx}
@@ -69,8 +69,8 @@ export default function WhoPentaSoftIsBuiltFor() {
               onClick={() => setActiveTab(idx)}
               className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold transition-all cursor-pointer ${
                 activeTab === idx
-                  ? 'bg-[#DC2626] text-white shadow-xl scale-105'
-                  : 'liquid-glass-pill text-neutral-800 hover:bg-white border border-neutral-200'
+                  ? 'clay-btn-red scale-105'
+                  : 'liquid-glass-pill text-neutral-800 hover:bg-white border border-neutral-300'
               }`}
             >
               {p.tab}
@@ -84,7 +84,7 @@ export default function WhoPentaSoftIsBuiltFor() {
             <div className="text-xs font-mono font-bold text-[#1D4ED8]">
               {personas[activeTab].badge}
             </div>
-            <div className="w-9 h-9 rounded-xl bg-[#DC2626] text-white flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 rounded-2xl clay-btn-red flex items-center justify-center">
               {React.createElement(personas[activeTab].icon, { className: 'w-4 h-4' })}
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function WhoPentaSoftIsBuiltFor() {
 
           <a
             href="#contact"
-            className="inline-flex items-center space-x-2 px-7 py-3.5 rounded-full text-xs font-bold bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-lg transition-all hover:scale-105"
+            className="inline-flex items-center space-x-2 px-7 py-3.5 rounded-full text-xs font-bold clay-btn-red cursor-pointer"
           >
             <span>Consult on Your Business Requirements</span>
             <ArrowRight className="w-4 h-4" />
