@@ -44,18 +44,18 @@ export default function WhoPentaSoftIsBuiltFor() {
   ];
 
   return (
-    <section id="who-we-serve" className="py-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
+    <section id="who-we-serve" className="py-28 bg-[#F8F9FB] text-[#101010] border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center pb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
+          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill border border-neutral-200 shadow-sm">
             <span>□ EMPOWERING BUSINESSES TO SCALE & SIMPLIFY</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
             Who Planex Software Consultancy Is Built For
           </h2>
-          <p className="text-neutral-800 text-base sm:text-lg font-medium leading-relaxed">
+          <p className="text-neutral-700 text-base sm:text-lg font-medium leading-relaxed">
             We help businesses establish a commanding online presence, build tailored software systems that simplify daily operations, and engineer custom solutions designed for maximum efficiency.
           </p>
         </div>
@@ -69,8 +69,8 @@ export default function WhoPentaSoftIsBuiltFor() {
               onClick={() => setActiveTab(idx)}
               className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold transition-all cursor-pointer ${
                 activeTab === idx
-                  ? 'bg-black text-[#D4F82C] shadow-xl scale-105'
-                  : 'liquid-glass-pill text-black hover:bg-white/60'
+                  ? 'bg-[#DC2626] text-white shadow-xl scale-105'
+                  : 'liquid-glass-pill text-neutral-800 hover:bg-white border border-neutral-200'
               }`}
             >
               {p.tab}
@@ -81,10 +81,10 @@ export default function WhoPentaSoftIsBuiltFor() {
         {/* Active Persona Liquid Glass Card */}
         <div className="max-w-4xl mx-auto liquid-glass-card p-8 sm:p-12">
           <div className="flex items-center justify-between mb-6">
-            <div className="text-xs font-mono font-bold text-neutral-700">
+            <div className="text-xs font-mono font-bold text-neutral-600">
               {personas[activeTab].badge}
             </div>
-            <div className="w-9 h-9 rounded-xl bg-black text-[#D4F82C] flex items-center justify-center shadow-md">
+            <div className="w-9 h-9 rounded-xl bg-[#DC2626] text-white flex items-center justify-center shadow-md">
               {React.createElement(personas[activeTab].icon, { className: 'w-4 h-4' })}
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function WhoPentaSoftIsBuiltFor() {
             {personas[activeTab].title}
           </h3>
 
-          <p className="text-neutral-800 text-base leading-relaxed mb-6 font-medium">
+          <p className="text-neutral-700 text-base leading-relaxed mb-6 font-medium">
             {personas[activeTab].subtitle}
           </p>
 
@@ -104,12 +104,12 @@ export default function WhoPentaSoftIsBuiltFor() {
                 key={pIdx}
                 className="px-4 py-3.5 rounded-2xl text-xs sm:text-sm font-mono text-neutral-900 font-bold transition-all duration-200 hover:scale-[1.01] flex items-center space-x-3"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.65)',
-                  boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.06), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.7)'
+                  background: 'rgba(255, 255, 255, 0.85)',
+                  boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.04), -3px -3px 8px rgba(255, 255, 255, 0.95), inset 1px 1px 2px rgba(255, 255, 255, 0.8)',
+                  border: '1px solid rgba(229, 231, 235, 0.8)'
                 }}
               >
-                <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#DC2626] shrink-0" />
                 <span>{point}</span>
               </div>
             ))}
@@ -117,7 +117,7 @@ export default function WhoPentaSoftIsBuiltFor() {
 
           <a
             href="#contact"
-            className="inline-flex items-center space-x-2 px-7 py-3.5 rounded-full text-xs font-bold bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-md transition-all hover:scale-105"
+            className="inline-flex items-center space-x-2 px-7 py-3.5 rounded-full text-xs font-bold bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-lg transition-all hover:scale-105"
           >
             <span>Consult on Your Business Requirements</span>
             <ArrowRight className="w-4 h-4" />

@@ -4,19 +4,19 @@ import CoreValuesPond3D from './3d/CoreValuesPond3D';
 
 export default function AboutUsVision() {
   return (
-    <section id="about-us" className="py-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
+    <section id="about-us" className="py-28 bg-[#F8F9FB] text-[#101010] border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Blueprint Pill */}
         <div className="text-center pb-6">
-          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
-            <Calendar className="w-3.5 h-3.5 text-black" />
+          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill border border-neutral-200 shadow-sm">
+            <Calendar className="w-3.5 h-3.5 text-[#DC2626]" />
             <span>ESTABLISHED 1994 // 30+ YEARS OF SOFTWARE EXCELLENCE</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
             Our Story, Vision & Heritage
           </h2>
-          <p className="text-neutral-800 text-base sm:text-lg max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-neutral-700 text-base sm:text-lg max-w-3xl mx-auto font-medium leading-relaxed">
             Established in 1994, Planex Software Consultancy has grown into a trusted software solutions provider, empowering industrial leaders, construction firms, and growing enterprises across India.
           </p>
         </div>

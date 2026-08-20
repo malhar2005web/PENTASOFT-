@@ -30,17 +30,17 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] pt-32 pb-16 flex flex-col justify-center overflow-visible bg-[#D4F82C] text-black">
+    <section id="home" className="relative min-h-[90vh] pt-32 pb-16 flex flex-col justify-center overflow-visible bg-[#F8F9FB] text-black">
       {/* Subtle ambient light */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-white/25 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-40 w-full pt-4">
         
         {/* Top Industry Pill */}
-        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full liquid-glass-pill text-xs font-mono text-black font-bold mb-8 hover:bg-white/60 transition-colors cursor-pointer shadow-sm">
-          <span className="w-2 h-2 rounded-sm bg-black"></span>
+        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full liquid-glass-pill text-xs font-mono text-neutral-800 font-bold mb-8 hover:bg-white transition-colors cursor-pointer shadow-sm border border-neutral-200">
+          <span className="w-2 h-2 rounded-sm bg-[#DC2626]"></span>
           <span>ENTERPRISE IT SOLUTIONS // PHARMA • CONSTRUCTION • CLOUD</span>
-          <span className="text-black font-bold">»</span>
+          <span className="text-[#DC2626] font-bold">»</span>
         </div>
 
         {/* Huge Clean Centered Headline */}
@@ -50,7 +50,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Clean Subtitle */}
-        <p className="text-neutral-800 text-base sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed mb-8">
+        <p className="text-neutral-700 text-base sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed mb-8">
           Planex Software Consultancy delivers end-to-end software solutions — from cross-platform mobile apps and high-performance websites to complete cloud operations tailored for Construction, Pharma, and Enterprise industries.
         </p>
 
@@ -59,7 +59,7 @@ export default function HeroSection() {
           
           {/* Main Dropdown Button for Demo */}
           <div className="relative w-full sm:w-auto">
-            <div className="inline-flex rounded-full shadow-2xl bg-black p-0.5 border border-black/20">
+            <div className="inline-flex rounded-full shadow-2xl bg-[#DC2626] p-0.5 border border-red-700">
               <button
                 type="button"
                 onClick={() => {
@@ -69,7 +69,7 @@ export default function HeroSection() {
                     setDropdownOpen(!dropdownOpen);
                   }
                 }}
-                className="px-7 py-3.5 rounded-full font-bold text-xs bg-black text-[#D4F82C] hover:bg-neutral-900 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                className="px-7 py-3.5 rounded-full font-bold text-xs bg-[#DC2626] text-white hover:bg-[#B91C1C] transition-all flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>{showLaptop ? `LIVE: ${demoOptions[selectedDemoIndex].name}` : 'SEE LIVE DEMO'}</span>
               </button>
@@ -80,7 +80,7 @@ export default function HeroSection() {
                   e.stopPropagation();
                   setDropdownOpen((prev) => !prev);
                 }}
-                className="px-3.5 py-3.5 rounded-full bg-neutral-900 text-[#D4F82C] hover:bg-neutral-800 transition-all flex items-center justify-center cursor-pointer"
+                className="px-3.5 py-3.5 rounded-full bg-[#B91C1C] text-white hover:bg-red-800 transition-all flex items-center justify-center cursor-pointer"
                 title="Select Web App Demo"
               >
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />

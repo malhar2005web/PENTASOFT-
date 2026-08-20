@@ -54,17 +54,17 @@ export default function WhatPentaSoftDoes() {
   ];
 
   return (
-    <section id="what-we-do" className="pt-16 pb-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
+    <section id="what-we-do" className="pt-16 pb-28 bg-[#F8F9FB] text-[#101010] border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 3 Big Stat Numbers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 border-b border-black/10 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 border-b border-neutral-200 text-center">
           {stats.map((s, idx) => (
             <div key={idx} className="space-y-2">
               <div className="text-5xl sm:text-6xl font-black tracking-tight text-black font-mono">
                 {s.number}
               </div>
-              <div className="text-xs sm:text-sm text-neutral-800 max-w-[240px] mx-auto font-bold leading-snug">
+              <div className="text-xs sm:text-sm text-neutral-600 max-w-[240px] mx-auto font-bold leading-snug">
                 {s.label}
               </div>
             </div>
@@ -73,13 +73,13 @@ export default function WhatPentaSoftDoes() {
 
         {/* Section Heading */}
         <div className="text-center pt-24 pb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
+          <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill border border-neutral-200 shadow-sm">
             <span>□ PLANEX SOFTWARE CONSULTANCY // PRODUCT SUITE & SERVICES</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
             Software Solutions Built for Scale
           </h2>
-          <p className="text-neutral-800 text-base sm:text-lg font-medium leading-relaxed">
+          <p className="text-neutral-700 text-base sm:text-lg font-medium leading-relaxed">
             From specialized Ready Mix Concrete (RMC) and Crusher plant software to enterprise ERP, TeamPulse workforce tracking, and bespoke cloud development.
           </p>
         </div>
@@ -94,11 +94,11 @@ export default function WhatPentaSoftDoes() {
                 className="liquid-glass-card p-8 sm:p-9 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="text-[11px] font-mono font-bold text-neutral-700 mb-5">
+                  <div className="text-[11px] font-mono font-bold text-neutral-600 mb-5">
                     {p.tag}
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-black text-[#D4F82C] flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl bg-[#DC2626] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                     <IconComp className="w-6 h-6" />
                   </div>
 

@@ -65,10 +65,10 @@ export default function TechnicalConsultation() {
   };
 
   return (
-    <section id="contact" className="py-28 bg-[#D4F82C] text-[#101010] border-t border-black/10">
+    <section id="contact" className="py-28 bg-[#F8F9FB] text-[#101010] border-t border-neutral-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-        <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill">
+        <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill border border-neutral-200 shadow-sm">
           <span>□ INITIATE INDUSTRY ENGAGEMENT</span>
         </div>
 
@@ -76,7 +76,7 @@ export default function TechnicalConsultation() {
           Ready to build custom software for your industry?
         </h2>
 
-        <p className="text-neutral-800 text-base sm:text-lg max-w-xl mx-auto mb-10 font-medium">
+        <p className="text-neutral-700 text-base sm:text-lg max-w-xl mx-auto mb-10 font-medium">
           Consult directly with our solution architects. We design scalable systems tailored for Pharma, Construction, Mobile & Cloud operations.
         </p>
 
@@ -84,25 +84,25 @@ export default function TechnicalConsultation() {
         <div className="flex flex-wrap items-center justify-center gap-3 mb-10 text-xs font-mono font-bold">
           <a
             href="tel:+919821027060"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-black hover:bg-white/80 transition-all shadow-sm"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-neutral-800 hover:bg-white transition-all shadow-sm border border-neutral-200"
           >
-            <Phone className="w-4 h-4 text-black" />
+            <Phone className="w-4 h-4 text-[#DC2626]" />
             <span>+91 98210 27060</span>
           </a>
 
           <a
             href="mailto:rekha@pentasoftconsultancy.com"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-black hover:bg-white/80 transition-all shadow-sm"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-neutral-800 hover:bg-white transition-all shadow-sm border border-neutral-200"
           >
-            <Mail className="w-4 h-4 text-black" />
+            <Mail className="w-4 h-4 text-[#DC2626]" />
             <span>rekha@pentasoftconsultancy.com</span>
           </a>
 
           <a
             href="mailto:joshi@pentasoftconsultancy.com"
-            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-black hover:bg-white/80 transition-all shadow-sm"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full liquid-glass-pill text-neutral-800 hover:bg-white transition-all shadow-sm border border-neutral-200"
           >
-            <Mail className="w-4 h-4 text-black" />
+            <Mail className="w-4 h-4 text-[#DC2626]" />
             <span>joshi@pentasoftconsultancy.com</span>
           </a>
         </div>
@@ -111,11 +111,11 @@ export default function TechnicalConsultation() {
         <div className="liquid-glass-card p-8 sm:p-12 text-left">
           {submitted ? (
             <div className="py-12 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-black text-[#D4F82C] mx-auto flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 rounded-full bg-[#DC2626] text-white mx-auto flex items-center justify-center shadow-lg">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-black text-black">Inquiry Transmitted Successfully</h3>
-              <p className="text-neutral-800 text-sm max-w-md mx-auto font-medium leading-relaxed">
+              <p className="text-neutral-700 text-sm max-w-md mx-auto font-medium leading-relaxed">
                 Your specifications have been delivered to <strong>joshi@pentasoftconsultancy.com</strong>. Our solutions team will review your project requirements and respond within 24 hours.
               </p>
               <div className="pt-4">
@@ -129,7 +129,7 @@ export default function TechnicalConsultation() {
                       workloadRequirements: ''
                     });
                   }}
-                  className="px-6 py-2.5 rounded-full text-xs font-mono font-bold bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-md transition-transform hover:scale-105"
+                  className="px-6 py-2.5 rounded-full text-xs font-mono font-bold bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-md transition-transform hover:scale-105"
                 >
                   Transmit another inquiry
                 </button>
@@ -146,7 +146,7 @@ export default function TechnicalConsultation() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Rajesh Sharma (Operations Director)"
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/60 border border-black/15 text-black text-sm font-medium focus:outline-none focus:border-black focus:bg-white transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
                   />
                 </div>
 
@@ -158,7 +158,7 @@ export default function TechnicalConsultation() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="rajesh@organization.com"
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/60 border border-black/15 text-black text-sm font-medium focus:outline-none focus:border-black focus:bg-white transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function TechnicalConsultation() {
                 <select
                   value={formData.industryDomain}
                   onChange={(e) => setFormData({ ...formData, industryDomain: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/60 border border-black/15 text-black text-sm font-medium focus:outline-none focus:border-black focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
                 >
                   <option value="Pharmaceuticals & Healthcare IT Solutions">Pharmaceuticals & Healthcare IT (GMP / Batch Tracking)</option>
                   <option value="Construction & Infrastructure Operations">Construction & Infrastructure (Field Apps / Material ERP)</option>
@@ -186,7 +186,7 @@ export default function TechnicalConsultation() {
                   value={formData.workloadRequirements}
                   onChange={(e) => setFormData({ ...formData, workloadRequirements: e.target.value })}
                   placeholder="Describe your current industry challenges, app/website needs, cloud hosting preferences, or specific operational requirements..."
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/60 border border-black/15 text-black text-sm font-medium focus:outline-none focus:border-black focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl bg-white/80 border border-neutral-300 text-black text-sm font-medium focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
                 ></textarea>
               </div>
 
@@ -200,11 +200,11 @@ export default function TechnicalConsultation() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-full font-bold text-xs font-mono bg-black text-[#D4F82C] hover:bg-neutral-900 shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full py-4 rounded-full font-bold text-xs font-mono bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin text-[#D4F82C]" />
+                    <Loader2 className="w-4 h-4 animate-spin text-white" />
                     <span>TRANSMITTING SPECIFICATIONS...</span>
                   </>
                 ) : (
