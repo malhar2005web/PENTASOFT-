@@ -110,22 +110,15 @@ export default function WhatPentaSoftDoes() {
                     {p.description}
                   </p>
 
-                  {/* Light Blue Neumorphic Feature Pills */}
+                  {/* 3D Clay Feature Pills */}
                   <div className="space-y-2.5 pt-2">
                     {p.features.map((feat, fIdx) => (
                       <div
                         key={fIdx}
-                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-blue-950 font-bold transition-all duration-200 hover:scale-[1.02] hover:bg-white"
-                        style={{
-                          background: 'rgba(255, 255, 255, 0.9)',
-                          boxShadow: '3px 3px 8px rgba(30, 64, 175, 0.06), inset 1px 1px 2px rgba(255, 255, 255, 0.95)',
-                          border: '1px solid #BFDBFE'
-                        }}
+                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-blue-950 font-bold clay-pill-item flex items-center space-x-2"
                       >
-                        <div className="flex items-center space-x-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0"></span>
-                          <span className="truncate">{feat}</span>
-                        </div>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0"></span>
+                        <span className="truncate">{feat}</span>
                       </div>
                     ))}
                   </div>
