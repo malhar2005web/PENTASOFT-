@@ -46,70 +46,70 @@
   background: #DC2626;
 }
 
-/* 3D Claymorphic Red Button (Rich 3D Depth, Bevel & Crisp Black Shadows) */
+/* 3D Claymorphic Red Button (Rich 3D Depth, Pure Solid Black #000000 Bevel & Black Shadows) */
 .clay-btn-red {
-  background: linear-gradient(180deg, #FF4B4B 0%, #DC2626 55%, #B91C1C 100%);
+  background: linear-gradient(180deg, #FF4B4B 0%, #DC2626 55%, #B91C1C 100%) !important;
   color: #FFFFFF !important;
   font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
   box-shadow: 
-    0 4px 0 #7F1D1D,
-    0 8px 16px -2px rgba(0, 0, 0, 0.4),
-    inset 0 2px 3px rgba(255, 255, 255, 0.6),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+    0 5px 0 #000000,
+    0 10px 22px -2px rgba(0, 0, 0, 0.55),
+    inset 0 2px 3px rgba(255, 255, 255, 0.55),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.45) !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .clay-btn-red:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 0 #7F1D1D,
-    0 12px 22px -2px rgba(0, 0, 0, 0.5),
-    inset 0 2px 4px rgba(255, 255, 255, 0.75),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+    0 7px 0 #000000,
+    0 14px 28px -2px rgba(0, 0, 0, 0.65),
+    inset 0 2px 4px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.45) !important;
 }
 
 .clay-btn-red:active {
   transform: translateY(3px);
   box-shadow: 
-    0 1px 0 #7F1D1D,
-    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 2px 0 #000000,
+    0 6px 12px rgba(0, 0, 0, 0.5),
     inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    inset 0 -1px 2px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* 3D Claymorphic Blue Button */
+/* 3D Claymorphic Blue Button (Pure Solid Black #000000 Bevel & Black Shadows) */
 .clay-btn-blue {
-  background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 55%, #1E40AF 100%);
+  background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 55%, #1E40AF 100%) !important;
   color: #FFFFFF !important;
   font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
   box-shadow: 
-    0 4px 0 #1E3A8A,
-    0 8px 16px -2px rgba(0, 0, 0, 0.4),
-    inset 0 2px 3px rgba(255, 255, 255, 0.6),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+    0 5px 0 #000000,
+    0 10px 22px -2px rgba(0, 0, 0, 0.55),
+    inset 0 2px 3px rgba(255, 255, 255, 0.55),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.45) !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .clay-btn-blue:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 0 #1E3A8A,
-    0 12px 22px -2px rgba(0, 0, 0, 0.5),
-    inset 0 2px 4px rgba(255, 255, 255, 0.75),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+    0 7px 0 #000000,
+    0 14px 28px -2px rgba(0, 0, 0, 0.65),
+    inset 0 2px 4px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.45) !important;
 }
 
 .clay-btn-blue:active {
   transform: translateY(3px);
   box-shadow: 
-    0 1px 0 #1E3A8A,
-    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 2px 0 #000000,
+    0 6px 12px rgba(0, 0, 0, 0.5),
     inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    inset 0 -1px 2px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* Blue Frosted Glass Navbar Container */

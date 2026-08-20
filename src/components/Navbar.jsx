@@ -92,7 +92,7 @@ export default function Navbar() {
                       className="absolute inset-0 rounded-full z-[-1]"
                       style={{
                         background: 'linear-gradient(180deg, #FF4B4B 0%, #DC2626 55%, #B91C1C 100%)',
-                        boxShadow: '0 4px 0 #7F1D1D, 0 8px 16px -2px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -2px 3px rgba(0, 0, 0, 0.4)',
+                        boxShadow: '0 4px 0 #18181B, 0 8px 16px -2px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -2px 3px rgba(0, 0, 0, 0.4)',
                         border: '1px solid rgba(255, 255, 255, 0.4)'
                       }}
                       transition={{
