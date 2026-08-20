@@ -17,7 +17,7 @@ export default function AboutUsVision() {
             Our Story, Vision & Heritage
           </h2>
           <p className="text-neutral-700 text-base sm:text-lg max-w-3xl mx-auto font-medium leading-relaxed">
-            Established in 1994, Planex Software Consultancy has grown into a trusted software solutions provider, empowering industrial leaders, construction firms, and growing enterprises across India.
+            Established in 1994, Planex Software has grown into a trusted software solutions provider, empowering industrial leaders, construction firms, and growing enterprises across India.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function AboutUsVision() {
               </h3>
               <div className="space-y-4 text-neutral-700 text-sm leading-relaxed font-medium">
                 <p>
-                  Established in <strong>1994</strong>, Planex Software Consultancy has evolved into a premier enterprise software provider specializing in <strong>Ready Mix Concrete (RMC), Crusher Plant Management, ERP, SCADA integration, Billing, E-Invoicing, and Custom Cloud Solutions</strong>.
+                  Established in <strong>1994</strong>, Planex Software has evolved into a premier enterprise software provider specializing in <strong>Ready Mix Concrete (RMC), Crusher Plant Management, ERP, SCADA integration, Billing, E-Invoicing, and Custom Cloud Solutions</strong>.
                 </p>
                 <p>
                   Over the past 30+ years, we have continuously innovated our proprietary <strong>Penta Product Suite</strong> to meet the demanding requirements of construction, manufacturing, healthcare, and trading sectors across India.

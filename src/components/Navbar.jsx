@@ -52,14 +52,14 @@ export default function Navbar() {
           <a href="#home" className="flex items-center space-x-3.5 group">
             <img 
               src="/logo.png" 
-              alt="Planex Software Consultancy Logo" 
+              alt="Planex Software Logo" 
               className="h-11 sm:h-12 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-200"
             />
             <div className="flex flex-col">
               <span className="font-black text-lg tracking-tight text-white flex items-center gap-1.5">
-                Planex <span className="font-semibold text-blue-200">Software Consultancy</span>
+                Planex <span className="font-semibold text-blue-200">Software</span>
               </span>
-              <span className="text-[10px] font-mono text-blue-300 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE CONSULTANCY</span>
+              <span className="text-[10px] font-mono text-blue-300 tracking-wider font-bold">EST. 1994 // PLANEX SOFTWARE</span>
             </div>
           </a>
 

@@ -102,7 +102,7 @@ export default function FinalCTA() {
                 </div>
                 <h3 className="text-2xl font-bold text-white">Inquiry Received</h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto">
-                  Thank you for reaching out to Planex Software Consultancy. Your inquiry has been sent to <strong>joshi@pentasoftconsultancy.com</strong>. Our engineering team will review your project specs and respond within 24 hours.
+                  Thank you for reaching out to Planex Software. Your inquiry has been sent to <strong>joshi@pentasoftconsultancy.com</strong>. Our engineering team will review your project specs and respond within 24 hours.
                 </p>
                 <button
                   onClick={() => { setFormSubmitted(false); setFormData({ name: '', email: '', message: '' }); }}

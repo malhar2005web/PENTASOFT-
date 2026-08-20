@@ -53,7 +53,7 @@ export default function WhoPentaSoftIsBuiltFor() {
             <span>□ EMPOWERING BUSINESSES TO SCALE & SIMPLIFY</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
-            Who Planex Software Consultancy Is Built For
+            Who Planex Software Is Built For
           </h2>
           <p className="text-neutral-700 text-base sm:text-lg font-medium leading-relaxed">
             We help businesses establish a commanding online presence, build tailored software systems that simplify daily operations, and engineer custom solutions designed for maximum efficiency.

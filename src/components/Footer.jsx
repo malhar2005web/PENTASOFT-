@@ -18,9 +18,9 @@ export default function Footer() {
               />
               <div className="flex flex-col">
                 <span className="font-extrabold text-white text-base tracking-tight">
-                  Planex <span className="text-slate-400 font-normal">Software Consultancy</span>
+                  Planex <span className="text-slate-400 font-normal">Software</span>
                 </span>
-                <span className="text-[10px] text-slate-500 font-mono font-bold">PLANEX SOFTWARE CONSULTANCY • ESTD. 1994</span>
+                <span className="text-[10px] text-slate-500 font-mono font-bold">PLANEX SOFTWARE • ESTD. 1994</span>
               </div>
             </div>
             <p className="text-slate-400 text-xs font-sans max-w-sm leading-relaxed">
@@ -38,32 +38,32 @@ export default function Footer() {
             </div>
             
             <div className="flex items-start space-x-2.5 text-slate-300 py-0.5 font-sans text-xs leading-relaxed">
-              <MapPin className="w-4 h-4 text-[#D4F82C] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
               <span>501-502, Bldg No. 6, Sector-3, Shanti Garden, Near New MHADA Buildings, Srishti, Mira Road - 401107, Mumbai, India</span>
             </div>
 
             <div className="space-y-1.5 pt-2">
               <a 
                 href="tel:+919821027060" 
-                className="flex items-center space-x-2.5 text-slate-300 hover:text-[#D4F82C] transition-colors py-0.5"
+                className="flex items-center space-x-2.5 text-slate-300 hover:text-white transition-colors py-0.5"
               >
-                <Phone className="w-4 h-4 text-[#D4F82C] shrink-0" />
+                <Phone className="w-4 h-4 text-[#DC2626] shrink-0" />
                 <span>+91 98210 27060 / +91 96645 40011</span>
               </a>
 
               <a 
                 href="mailto:joshi@pentasoftconsultancy.com" 
-                className="flex items-center space-x-2.5 text-slate-300 hover:text-[#D4F82C] transition-colors py-0.5"
+                className="flex items-center space-x-2.5 text-slate-300 hover:text-white transition-colors py-0.5"
               >
-                <Mail className="w-4 h-4 text-[#D4F82C] shrink-0" />
+                <Mail className="w-4 h-4 text-[#DC2626] shrink-0" />
                 <span>joshi@pentasoftconsultancy.com</span>
               </a>
 
               <a 
                 href="mailto:rekha@pentasoftconsultancy.com" 
-                className="flex items-center space-x-2.5 text-slate-300 hover:text-[#D4F82C] transition-colors py-0.5"
+                className="flex items-center space-x-2.5 text-slate-300 hover:text-white transition-colors py-0.5"
               >
-                <Mail className="w-4 h-4 text-[#D4F82C] shrink-0" />
+                <Mail className="w-4 h-4 text-[#DC2626] shrink-0" />
                 <span>rekha@pentasoftconsultancy.com</span>
               </a>
             </div>
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom SLA and Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} Planex Software Consultancy Services. All rights reserved.
+            © {new Date().getFullYear()} Planex Software. All rights reserved.
           </div>
           <div className="flex items-center space-x-2 text-emerald-400">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>

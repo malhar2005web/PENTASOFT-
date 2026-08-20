@@ -33,7 +33,7 @@ export default function WhyPentaSoft() {
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass-pill border border-white/10 text-xs font-mono text-[#00E5FF] mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
-            <span>Section 07 — Why Planex Software Consultancy</span>
+            <span>Section 07 — Why Planex Software</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Built on discipline, <span className="text-gradient-cyan">not hype</span>.

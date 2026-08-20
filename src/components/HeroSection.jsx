@@ -51,7 +51,7 @@ export default function HeroSection() {
 
         {/* Clean Subtitle */}
         <p className="text-neutral-700 text-base sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed mb-8">
-          Planex Software Consultancy delivers end-to-end software solutions — from cross-platform mobile apps and high-performance websites to complete cloud operations tailored for Construction, Pharma, and Enterprise industries.
+          Planex Software delivers end-to-end software solutions — from cross-platform mobile apps and high-performance websites to complete cloud operations tailored for Construction, Pharma, and Enterprise industries.
         </p>
 
         {/* Action Buttons with High Z-Index Dropdown */}

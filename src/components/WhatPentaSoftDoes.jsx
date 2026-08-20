@@ -74,7 +74,7 @@ export default function WhatPentaSoftDoes() {
         {/* Section Heading */}
         <div className="text-center pt-24 pb-16 max-w-3xl mx-auto">
           <div className="inline-flex items-center space-x-2 text-xs font-mono text-neutral-800 font-bold uppercase tracking-wider mb-4 px-3.5 py-1.5 rounded-full liquid-glass-pill border border-neutral-200 shadow-sm">
-            <span>□ PLANEX SOFTWARE CONSULTANCY // PRODUCT SUITE & SERVICES</span>
+            <span>□ PLANEX SOFTWARE // PRODUCT SUITE & SERVICES</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-black mb-6">
             Software Solutions Built for Scale

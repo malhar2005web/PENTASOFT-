@@ -39,7 +39,7 @@ export default function WhoWeAre() {
             We are engineering partners for organizations that <span className="text-gradient-cyan">refuse to settle</span> for template code.
           </h2>
           <p className="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-            Planex Software Consultancy brings deep technical domain expertise to build software systems that solve complex operational bottlenecks. We combine strategic design with clean, high-performance code to power enterprise digital transformation.
+            Planex Software brings deep technical domain expertise to build software systems that solve complex operational bottlenecks. We combine strategic design with clean, high-performance code to power enterprise digital transformation.
           </p>
         </div>
 
