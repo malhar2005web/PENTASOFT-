@@ -27,14 +27,14 @@ export default function AboutUsVision() {
           {/* History Card */}
           <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
             <div>
-              <div className="text-xs font-mono font-bold text-blue-300 mb-4 flex items-center space-x-2">
-                <Building className="w-4 h-4 text-blue-300" />
+              <div className="text-xs font-mono font-bold text-[#1D4ED8] mb-4 flex items-center space-x-2">
+                <Building className="w-4 h-4 text-[#1D4ED8]" />
                 <span>COMPANY HISTORY & HERITAGE</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white mb-6">
+              <h3 className="text-2xl sm:text-3xl font-black text-[#0F172A] mb-6">
                 Over 3 Decades of Reliable Engineering
               </h3>
-              <div className="space-y-4 text-slate-200 text-sm leading-relaxed font-medium">
+              <div className="space-y-4 text-neutral-700 text-sm leading-relaxed font-medium">
                 <p>
                   Established in <strong>1994</strong>, Planex Software Consultancy has evolved into a premier enterprise software provider specializing in <strong>Ready Mix Concrete (RMC), Crusher Plant Management, ERP, SCADA integration, Billing, E-Invoicing, and Custom Cloud Solutions</strong>.
                 </p>
@@ -47,7 +47,7 @@ export default function AboutUsVision() {
               </div>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-white/15 flex items-center justify-between text-xs font-mono font-bold text-blue-200">
+            <div className="pt-8 mt-8 border-t border-blue-200/80 flex items-center justify-between text-xs font-mono font-bold text-neutral-600">
               <span>FOUNDED: 1994 (MUMBAI, INDIA)</span>
               <span>GST: 27AABPJ2329N1ZM</span>
             </div>
@@ -56,39 +56,39 @@ export default function AboutUsVision() {
           {/* Mission & Vision Card */}
           <div className="liquid-glass-card p-8 sm:p-12 flex flex-col justify-between">
             <div>
-              <div className="text-xs font-mono font-bold text-blue-300 mb-4 flex items-center space-x-2">
-                <Target className="w-4 h-4 text-blue-300" />
+              <div className="text-xs font-mono font-bold text-[#1D4ED8] mb-4 flex items-center space-x-2">
+                <Target className="w-4 h-4 text-[#1D4ED8]" />
                 <span>OUR MISSION & VISION</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white mb-6">
+              <h3 className="text-2xl sm:text-3xl font-black text-[#0F172A] mb-6">
                 Empowering Businesses Through Smarter Technology
               </h3>
               
               <div className="space-y-5">
-                <div className="p-5 rounded-2xl bg-white/10 border border-white/15">
-                  <div className="text-xs font-mono text-blue-300 font-bold uppercase mb-2 flex items-center space-x-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
+                <div className="p-5 rounded-2xl bg-white/80 border border-blue-200/80 shadow-sm">
+                  <div className="text-xs font-mono text-[#1D4ED8] font-bold uppercase mb-2 flex items-center space-x-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#2563EB]"></span>
                     <span>OUR MISSION</span>
                   </div>
-                  <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                  <p className="text-neutral-700 text-sm leading-relaxed font-medium">
                     To empower businesses with innovative, reliable, and user-friendly software solutions that enhance efficiency, accuracy, and productivity, while delivering continuous innovation and exceptional customer support.
                   </p>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-white/10 border border-white/15">
-                  <div className="text-xs font-mono text-blue-300 font-bold uppercase mb-2 flex items-center space-x-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
+                <div className="p-5 rounded-2xl bg-white/80 border border-blue-200/80 shadow-sm">
+                  <div className="text-xs font-mono text-[#1D4ED8] font-bold uppercase mb-2 flex items-center space-x-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#2563EB]"></span>
                     <span>OUR VISION</span>
                   </div>
-                  <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                  <p className="text-neutral-700 text-sm leading-relaxed font-medium">
                     To be the most trusted technology partner for industrial and commercial enterprises, building scalable software ecosystems that streamline operations and drive long-term business growth.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-white/15 flex items-center justify-between text-xs font-mono font-bold text-blue-200">
-              <span className="text-white font-bold">PAN-INDIA CLIENT BASE</span>
+            <div className="pt-8 mt-8 border-t border-blue-200/80 flex items-center justify-between text-xs font-mono font-bold text-neutral-600">
+              <span className="text-[#0F172A] font-bold">PAN-INDIA CLIENT BASE</span>
               <span>MIRA ROAD, MUMBAI HQ</span>
             </div>
           </div>

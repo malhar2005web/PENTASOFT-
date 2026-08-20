@@ -94,36 +94,36 @@ export default function WhatPentaSoftDoes() {
                 className="liquid-glass-card p-8 sm:p-9 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="text-[11px] font-mono font-bold text-blue-300 mb-5">
+                  <div className="text-[11px] font-mono font-bold text-[#1D4ED8] mb-5">
                     {p.tag}
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-[#DC2626] text-white flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform border border-red-400/40">
+                  <div className="w-12 h-12 rounded-2xl bg-[#DC2626] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                     <IconComp className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3.5">
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-3.5">
                     {p.title}
                   </h3>
 
-                  <p className="text-slate-200 text-xs leading-relaxed font-medium mb-6">
+                  <p className="text-neutral-700 text-xs leading-relaxed font-medium mb-6">
                     {p.description}
                   </p>
 
-                  {/* Frosted Blue Neumorphic Feature Pills */}
+                  {/* Light Blue Neumorphic Feature Pills */}
                   <div className="space-y-2.5 pt-2">
                     {p.features.map((feat, fIdx) => (
                       <div
                         key={fIdx}
-                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-white font-bold transition-all duration-200 hover:scale-[1.02] hover:bg-white/20"
+                        className="px-3.5 py-2.5 rounded-xl text-xs font-mono text-blue-950 font-bold transition-all duration-200 hover:scale-[1.02] hover:bg-white"
                         style={{
-                          background: 'rgba(255, 255, 255, 0.12)',
-                          boxShadow: 'inset 1px 1px 2px rgba(255, 255, 255, 0.25), 3px 3px 8px rgba(0, 0, 0, 0.2)',
-                          border: '1px solid rgba(255, 255, 255, 0.2)'
+                          background: 'rgba(255, 255, 255, 0.9)',
+                          boxShadow: '3px 3px 8px rgba(30, 64, 175, 0.06), inset 1px 1px 2px rgba(255, 255, 255, 0.95)',
+                          border: '1px solid #BFDBFE'
                         }}
                       >
                         <div className="flex items-center space-x-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] shrink-0"></span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0"></span>
                           <span className="truncate">{feat}</span>
                         </div>
                       </div>

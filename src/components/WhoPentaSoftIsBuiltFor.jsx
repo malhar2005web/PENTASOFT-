@@ -81,35 +81,35 @@ export default function WhoPentaSoftIsBuiltFor() {
         {/* Active Persona Liquid Glass Card */}
         <div className="max-w-4xl mx-auto liquid-glass-card p-8 sm:p-12">
           <div className="flex items-center justify-between mb-6">
-            <div className="text-xs font-mono font-bold text-blue-300">
+            <div className="text-xs font-mono font-bold text-[#1D4ED8]">
               {personas[activeTab].badge}
             </div>
-            <div className="w-9 h-9 rounded-xl bg-[#DC2626] text-white flex items-center justify-center shadow-lg border border-red-400/40">
+            <div className="w-9 h-9 rounded-xl bg-[#DC2626] text-white flex items-center justify-center shadow-md">
               {React.createElement(personas[activeTab].icon, { className: 'w-4 h-4' })}
             </div>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-black text-white mb-4">
+          <h3 className="text-2xl sm:text-3xl font-black text-[#0F172A] mb-4">
             {personas[activeTab].title}
           </h3>
 
-          <p className="text-slate-200 text-base leading-relaxed mb-6 font-medium">
+          <p className="text-neutral-700 text-base leading-relaxed mb-6 font-medium">
             {personas[activeTab].subtitle}
           </p>
 
-          {/* Frosted Blue Neumorphic Feature Points */}
+          {/* Light Blue Neumorphic Feature Points */}
           <div className="space-y-3 pt-2 mb-8">
             {personas[activeTab].points.map((point, pIdx) => (
               <div
                 key={pIdx}
-                className="px-4 py-3.5 rounded-2xl text-xs sm:text-sm font-mono text-white font-bold transition-all duration-200 hover:scale-[1.01] hover:bg-white/20 flex items-center space-x-3"
+                className="px-4 py-3.5 rounded-2xl text-xs sm:text-sm font-mono text-blue-950 font-bold transition-all duration-200 hover:scale-[1.01] hover:bg-white flex items-center space-x-3"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.12)',
-                  boxShadow: 'inset 1px 1px 2px rgba(255, 255, 255, 0.25), 3px 3px 8px rgba(0, 0, 0, 0.2)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  boxShadow: '3px 3px 8px rgba(30, 64, 175, 0.06), inset 1px 1px 2px rgba(255, 255, 255, 0.95)',
+                  border: '1px solid #BFDBFE'
                 }}
               >
-                <CheckCircle2 className="w-4 h-4 text-[#38bdf8] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
                 <span>{point}</span>
               </div>
             ))}
